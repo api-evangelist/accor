@@ -1,0 +1,230 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 16
+  own: 16
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - data
+  - other
+  - partner
+  - portal
+  - sandbox
+  - website
+hosts:
+- host: accor.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: accor.com
+  role: website
+  relation: own
+- host: all.accor.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: accor.com
+  role: other
+  relation: own
+- host: api.accor.com
+  found_by:
+  - apis[]
+  - contract-discovery
+  - vendor-detect
+  types: []
+  serves:
+  - api
+  - api-gateway
+  - developer-portal
+  vendor: apigee
+  registrable_domain: accor.com
+  role: api
+  relation: own
+- host: apis.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: api
+  relation: own
+- host: careers.accor.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: accor.com
+  role: other
+  relation: own
+- host: data.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: data
+  relation: own
+- host: datahub.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: data
+  relation: own
+- host: developer.accor.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Support
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  title: Build limitless experiences | Accor
+  status: 200
+  vendor: fastly
+  registrable_domain: accor.com
+  role: portal
+  relation: own
+- host: developers.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: portal
+  relation: own
+- host: group.accor.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: accor.com
+  role: other
+  relation: own
+- host: open-data.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: data
+  relation: own
+- host: opendata.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: data
+  relation: own
+- host: partner.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: partner
+  relation: own
+- host: partners.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: partner
+  relation: own
+- host: press.accor.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: accor.com
+  role: other
+  relation: own
+- host: sandbox.accor.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: ALL Accor | Hotels Stays &amp; Exclusive Deals
+  status: 200
+  registrable_domain: accor.com
+  role: sandbox
+  relation: own

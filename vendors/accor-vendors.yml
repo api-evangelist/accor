@@ -1,0 +1,73 @@
+generated: '2026-09-22'
+method: probed
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors:
+- vendor: apigee
+  name: Apigee (Google Cloud)
+  area: api-gateway
+  host: api.accor.com
+  evidence: cname:apigee.net
+  signal: cname
+  confidence: high
+  kin_score:
+  - developer_portal
+  - rate_limits_documented
+  - authentication
+- vendor: cloudfront
+  name: Amazon CloudFront
+  area: cdn
+  host: accor.com
+  evidence: header:x-amz-cf-id
+  signal: header
+  confidence: high
+  kin_score: []
+- vendor: fastly
+  name: Fastly
+  area: cdn
+  host: developer.accor.com
+  evidence: cname:fastly.net
+  signal: cname
+  confidence: high
+  kin_score: []
+- vendor: imperva
+  name: Imperva
+  area: cdn
+  host: accor.com
+  evidence: header:x-cdn:imperva
+  signal: header
+  confidence: high
+  kin_score: []
+- vendor: apigee
+  name: Apigee (Google Cloud)
+  area: developer-portal
+  host: api.accor.com
+  evidence: cname:apigee.net
+  signal: cname
+  confidence: high
+  kin_score:
+  - developer_portal
+  - rate_limits_documented
+  - authentication
+checked:
+- 'docs-platform: no-docs-host'
+- accor.com (Website)
+- developer.accor.com (DeveloperPortal)
+- developer.accor.com (Documentation)
+- developer.accor.com (APIReference)
+- developer.accor.com (GettingStarted)
+- developer.accor.com (Support)
+- api.accor.com (baseURL)

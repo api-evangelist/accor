@@ -1,23 +1,84 @@
 aid: accor
+
 name: Accor
+
+image: https://images.group.accor.com/yrj0orc8tx24/7LDit16MyBanbXwhACNaGu/bb10a516761ba172d743f8b6feb3b319/ACCOR.COM_Hero-Homepage_LeireLeoz2.jpg?w=3840&q=100&fm=avif
+
 description: Accor is a global hospitality group operating a portfolio of hotels, resorts, and residences across more than 110 countries. The
   company focuses on delivering innovative travel experiences, sustainability initiatives, and digital services for guests and partners. While
   its consumer-facing sites provide booking and loyalty programs, Accor also offers partner solutions and data services, reflecting its commitment
   to technology-driven hospitality.
+
 url: https://raw.githubusercontent.com/api-evangelist/accor/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:travel
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
 - Company
 - Hospitality
 - Travel
 - Hotels
 - Technology
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+
+common:
+- type: Spectral
+  url: rules/accor-rules.yml
+- type: JSONLD
+  url: json-ld/accor-context.jsonld
+- type: Vocabulary
+  url: vocabulary/accor-vocabulary.yml
+- type: DataModel
+  url: data-model/accor-data-model.yml
+- type: Conformance
+  url: conformance/accor-conformance.yml
+- type: LLMsTxt
+  url: llms/accor-llms.txt
+- type: SecurityTxt
+  url: well-known/accor-all-security.txt
+- type: WellKnown
+  url: well-known/accor-well-known.yml
+- type: Hosts
+  url: hosts/accor-hosts.yml
+- type: Vendors
+  url: vendors/accor-vendors.yml
+- type: DomainSecurity
+  url: security/accor-domain-security.yml
+- type: Website
+  url: https://accor.com/
+- type: DeveloperPortal
+  url: https://developer.accor.com/
+- type: Documentation
+  url: https://developer.accor.com/api-portfolio
+- type: APIReference
+  url: https://developer.accor.com/api-portfolio
+- type: GettingStarted
+  url: https://developer.accor.com/user/register
+- type: Support
+  url: https://developer.accor.com/contact
+- type: Blog
+  url: https://developer.accor.com/blog
+- type: TermsOfService
+  url: https://developer.accor.com/terms_of_service
+- type: PrivacyPolicy
+  url: https://developer.accor.com/legal_notice
+
 apis:
 - aid: accor:accor-api
   name: Accor API
@@ -41,32 +102,7 @@ apis:
     url: json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
   - type: JSONSchema
     url: json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-- FN: APIs.json
-  email: info@apis.io
-common:
-- type: DomainSecurity
-  url: security/accor-domain-security.yml
-- type: Website
-  url: https://accor.com/
-- type: DeveloperPortal
-  url: https://developer.accor.com/
-- type: Documentation
-  url: https://developer.accor.com/api-portfolio
-- type: APIReference
-  url: https://developer.accor.com/api-portfolio
-- type: GettingStarted
-  url: https://developer.accor.com/user/register
-- type: Support
-  url: https://developer.accor.com/contact
-- type: Blog
-  url: https://developer.accor.com/blog
-- type: TermsOfService
-  url: https://developer.accor.com/terms_of_service
-- type: PrivacyPolicy
-  url: https://developer.accor.com/legal_notice
+
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
@@ -75,3 +111,9 @@ x-coverage:
   - url: https://developer.accor.com/
     status: 200
   checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 20
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

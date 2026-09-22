@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "@vocab": "https://accor.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "accor": "https://accor.com/schema#",
+    "GetBusinessoffersV1BestOffersResponse": "accor:GetBusinessoffersV1BestOffersResponse",
+    "BestOfferResponse": {
+      "@id": "accor:BestOfferResponse"
+    },
+    "PostBusinessoffersV1BestOffersRequest": "accor:PostBusinessoffersV1BestOffersRequest",
+    "BestOfferRequest": {
+      "@id": "accor:BestOfferRequest"
+    },
+    "PostBusinessoffersV1BestOffersResponse": "accor:PostBusinessoffersV1BestOffersResponse",
+    "GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse": "accor:GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse",
+    "CalendarBestOffersResponse": {
+      "@id": "accor:CalendarBestOffersResponse"
+    },
+    "PostBusinessoffersV1HotelsHotelidProductsOffersRequest": "accor:PostBusinessoffersV1HotelsHotelidProductsOffersRequest",
+    "OfferRequest": {
+      "@id": "accor:OfferRequest"
+    },
+    "PostBusinessoffersV1HotelsHotelidProductsOffersResponse": "accor:PostBusinessoffersV1HotelsHotelidProductsOffersResponse",
+    "OffersResponse": {
+      "@id": "accor:OffersResponse"
+    },
+    "GetBusinessoffersV1OffersOfferidResponse": "accor:GetBusinessoffersV1OffersOfferidResponse",
+    "OptionResponse": {
+      "@id": "accor:OptionResponse"
+    },
+    "GetBusinessoffersV1OffersOfferidPricingConditionsResponse": "accor:GetBusinessoffersV1OffersOfferidPricingConditionsResponse",
+    "PricingConditionsResponse": {
+      "@id": "accor:PricingConditionsResponse"
+    },
+    "PostCatalogV1HotelsHotelidPoliciesRequest": "accor:PostCatalogV1HotelsHotelidPoliciesRequest",
+    "PoliciesIn": {
+      "@id": "accor:PoliciesIn"
+    },
+    "PostCatalogV1HotelsHotelidPoliciesResponse": "accor:PostCatalogV1HotelsHotelidPoliciesResponse",
+    "Policies": {
+      "@id": "accor:Policies"
+    },
+    "TranslatedLabel": {
+      "@id": "accor:TranslatedLabel"
+    },
+    "Period": {
+      "@id": "accor:Period"
+    },
+    "Error": {
+      "@id": "accor:Error"
+    },
+    "GetCatalogV1HotelsHotelidTaxesResponse": "accor:GetCatalogV1HotelsHotelidTaxesResponse",
+    "Taxes": {
+      "@id": "accor:Taxes"
+    },
+    "Code": {
+      "@id": "accor:Code"
+    },
+    "CodeWithTranslatedLabels": {
+      "@id": "accor:CodeWithTranslatedLabels"
+    },
+    "GetCatalogV1HotelsIdProductsAccommodationsResponse": "accor:GetCatalogV1HotelsIdProductsAccommodationsResponse",
+    "ProductsAccommodationsDto": {
+      "@id": "accor:ProductsAccommodationsDto"
+    },
+    "PostCatalogV1HotelsIdRatesRequest": "accor:PostCatalogV1HotelsIdRatesRequest",
+    "RatesIn": {
+      "@id": "accor:RatesIn"
+    },
+    "PostCatalogV1HotelsIdRatesResponse": "accor:PostCatalogV1HotelsIdRatesResponse",
+    "Rates": {
+      "@id": "accor:Rates"
+    },
+    "GetCatalogV1InventoryHotelsResponse": "accor:GetCatalogV1InventoryHotelsResponse",
+    "default": {
+      "@id": "accor:default",
+      "@type": "xsd:string"
+    },
+    "GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse": "accor:GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse",
+    "BurnPointsRatio": {
+      "@id": "accor:BurnPointsRatio"
+    },
+    "PostLoyaltyV1BurnHotelxpHotelxpidRequest": "accor:PostLoyaltyV1BurnHotelxpHotelxpidRequest",
+    "ReleasePointRequest": {
+      "@id": "accor:ReleasePointRequest"
+    },
+    "PostLoyaltyV1BurnHotelxpHotelxpidResponse": "accor:PostLoyaltyV1BurnHotelxpHotelxpidResponse",
+    "ReleasePointResponse": {
+      "@id": "accor:ReleasePointResponse"
+    },
+    "GetLoyaltyV1BurnPartnerxpPartnerxpidResponse": "accor:GetLoyaltyV1BurnPartnerxpPartnerxpidResponse",
+    "PostLoyaltyV1BurnPartnerxpPartnerxpidRequest": "accor:PostLoyaltyV1BurnPartnerxpPartnerxpidRequest",
+    "PartnerReleasePointRequest": {
+      "@id": "accor:PartnerReleasePointRequest"
+    },
+    "PostLoyaltyV1BurnPartnerxpPartnerxpidResponse": "accor:PostLoyaltyV1BurnPartnerxpPartnerxpidResponse",
+    "PostLoyaltyV1BurnBurnidBurnpointsRequest": "accor:PostLoyaltyV1BurnBurnidBurnpointsRequest",
+    "FnbBurnPointRequest": {
+      "@id": "accor:FnbBurnPointRequest"
+    },
+    "PostLoyaltyV1BurnBurnidBurnpointsResponse": "accor:PostLoyaltyV1BurnBurnidBurnpointsResponse",
+    "FnbBurnPointResponse": {
+      "@id": "accor:FnbBurnPointResponse"
+    },
+    "PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest": "accor:PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest",
+    "UpdateDebitDateRequest": {
+      "@id": "accor:UpdateDebitDateRequest"
+    },
+    "PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse": "accor:PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse",
+    "UpdateDebitDateResponse": {
+      "@id": "accor:UpdateDebitDateResponse"
+    },
+    "PostLoyaltyV1EarnFnbEarnpointsRequest": "accor:PostLoyaltyV1EarnFnbEarnpointsRequest",
+    "FnbEarnPointRequest": {
+      "@id": "accor:FnbEarnPointRequest"
+    },
+    "PostLoyaltyV1EarnFnbEarnpointsResponse": "accor:PostLoyaltyV1EarnFnbEarnpointsResponse",
+    "FnbEarnPointResponse": {
+      "@id": "accor:FnbEarnPointResponse"
+    },
+    "GetLoyaltyV1EarnFnbTransactionidStatusResponse": "accor:GetLoyaltyV1EarnFnbTransactionidStatusResponse",
+    "FnbEarnStatusResponse": {
+      "@id": "accor:FnbEarnStatusResponse"
+    },
+    "PostLoyaltyV1MembersPmidIdRequest": "accor:PostLoyaltyV1MembersPmidIdRequest",
+    "LinkRequest": {
+      "@id": "accor:LinkRequest"
+    },
+    "PostLoyaltyV1MembersPmidIdResponse": "accor:PostLoyaltyV1MembersPmidIdResponse",
+    "LinkResponseEntity": {
+      "@id": "accor:LinkResponseEntity"
+    },
+    "GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse": "accor:GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse",
+    "ReferentialsResponseEntity": {
+      "@id": "accor:ReferentialsResponseEntity"
+    },
+    "ReferentialsPartnerResponseEntity": {
+      "@id": "accor:ReferentialsPartnerResponseEntity"
+    },
+    "GenericError": {
+      "@id": "accor:GenericError"
+    },
+    "GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff": "accor:GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff",
+    "PostLoyaltyV20PartnerEnrollRequest": "accor:PostLoyaltyV20PartnerEnrollRequest",
+    "partnerEnrollRequestBody": {
+      "@id": "accor:partnerEnrollRequestBody"
+    },
+    "PostLoyaltyV20PartnerEnrollResponse": "accor:PostLoyaltyV20PartnerEnrollResponse",
+    "partnerEnrollResponse": {
+      "@id": "accor:partnerEnrollResponse"
+    },
+    "errorBackend": {
+      "@id": "accor:errorBackend"
+    },
+    "errorApigee": {
+      "@id": "accor:errorApigee"
+    },
+    "PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ": "accor:PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ",
+    "CancelRequest": {
+      "@id": "accor:CancelRequest"
+    },
+    "PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp": "accor:PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp",
+    "CheckResponse": {
+      "@id": "accor:CheckResponse"
+    },
+    "GetPaymentV2CardsPaymenttransactionidResponse": "accor:GetPaymentV2CardsPaymenttransactionidResponse",
+    "object": {
+      "@id": "accor:object"
+    },
+    "PutPaymentV2CardsPaymenttransactionidPurgeResponse": "accor:PutPaymentV2CardsPaymenttransactionidPurgeResponse",
+    "GetPaymentV2MerchantsPaymentmeansResponse": "accor:GetPaymentV2MerchantsPaymentmeansResponse",
+    "body": {
+      "@id": "accor:body"
+    },
+    "GetPaymentV2ReferentialCardsResponse": "accor:GetPaymentV2ReferentialCardsResponse",
+    "PostPaymentV2SessionsPaymentsessionidTransactionsRequest": "accor:PostPaymentV2SessionsPaymentsessionidTransactionsRequest",
+    "PostPaymentV2SessionsPaymentsessionidTransactionsResponse": "accor:PostPaymentV2SessionsPaymentsessionidTransactionsResponse",
+    "DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr": "accor:DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr",
+    "GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans": "accor:GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans",
+    "PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat": "accor:PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat",
+    "PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat2": "accor:PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat2",
+    "GetPaymentV2TransactionsPaymenttransactionidIdResponse": "accor:GetPaymentV2TransactionsPaymenttransactionidIdResponse",
+    "PostPaymentV2TransactionsPaymenttransactionidIdRequest": "accor:PostPaymentV2TransactionsPaymenttransactionidIdRequest",
+    "PostPaymentV2TransactionsPaymenttransactionidIdResponse": "accor:PostPaymentV2TransactionsPaymenttransactionidIdResponse",
+    "PostPaymentV2V2IdRequest": "accor:PostPaymentV2V2IdRequest",
+    "PostPaymentV2V2IdResponse": "accor:PostPaymentV2V2IdResponse",
+    "DeleteWalletV2CardsCustomeridResponse": "accor:DeleteWalletV2CardsCustomeridResponse",
+    "PatchWalletV2CardsCustomeridRequest": "accor:PatchWalletV2CardsCustomeridRequest",
+    "PatchWalletV2CardsCustomeridResponse": "accor:PatchWalletV2CardsCustomeridResponse",
+    "PostWalletV2CardsCustomeridRequest": "accor:PostWalletV2CardsCustomeridRequest",
+    "PostWalletV2CardsCustomeridResponse": "accor:PostWalletV2CardsCustomeridResponse",
+    "GetWalletV2CardsCustomeridTokensResponse": "accor:GetWalletV2CardsCustomeridTokensResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Accor API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Accor's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-22) from openapi/_ae-authored/accor-openapi-generated.yml.",
+  "dcterms:created": "2026-09-22",
+  "dcterms:source": [
+    "openapi/_ae-authored/accor-openapi-generated.yml"
+  ]
+}

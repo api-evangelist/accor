@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/accor/main/json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json",
+  "title": "GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/accor-openapi-generated.yml#/components/schemas/GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse",
+  "type": "object",
+  "properties": {
+    "ReferentialsResponseEntity": {
+      "type": "object"
+    },
+    "ReferentialsPartnerResponseEntity": {
+      "type": "object"
+    },
+    "GenericError": {
+      "type": "object"
+    }
+  }
+}

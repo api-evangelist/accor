@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/accor/main/json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json",
+  "title": "PostLoyaltyV1BurnPartnerxpPartnerxpidRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/accor-openapi-generated.yml#/components/schemas/PostLoyaltyV1BurnPartnerxpPartnerxpidRequest",
+  "type": "object",
+  "properties": {
+    "PartnerReleasePointRequest": {
+      "type": "object",
+      "description": "Request body for releasing partner experience points"
+    }
+  },
+  "required": [
+    "PartnerReleasePointRequest"
+  ]
+}

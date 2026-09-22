@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/accor/main/json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json",
+  "title": "PostCatalogV1HotelsIdRatesResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/accor-openapi-generated.yml#/components/schemas/PostCatalogV1HotelsIdRatesResponse",
+  "type": "object",
+  "properties": {
+    "Rates": {
+      "type": "object",
+      "description": "Successful response containing rates"
+    },
+    "Error": {
+      "type": "object",
+      "description": "Error response"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/accor/main/json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json",
+  "title": "GetCatalogV1HotelsHotelidTaxesResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/accor-openapi-generated.yml#/components/schemas/GetCatalogV1HotelsHotelidTaxesResponse",
+  "type": "object",
+  "properties": {
+    "Taxes": {
+      "type": "object",
+      "description": "Taxes information."
+    },
+    "Code": {
+      "type": "object",
+      "description": "Tax code."
+    },
+    "TranslatedLabel": {
+      "type": "object",
+      "description": "Label translated in different languages."
+    },
+    "CodeWithTranslatedLabels": {
+      "type": "object",
+      "description": "Tax code with translated labels."
+    },
+    "Error": {
+      "type": "object",
+      "description": "Error object."
+    }
+  }
+}

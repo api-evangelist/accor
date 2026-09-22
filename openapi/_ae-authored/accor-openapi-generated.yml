@@ -1,0 +1,2067 @@
+openapi: 3.1.0
+info:
+  title: Accor API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 79 operation(s) read from 28 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; Accor has published no machine-readable contract that
+    the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 79
+    pages-with-code: 0
+    pages-read: 28
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.accor.com/api-portfolio/accommodations/108
+  - https://developer.accor.com/api-portfolio/asset-contracts/100
+  - https://developer.accor.com/api-portfolio/business-offers/134
+  - https://developer.accor.com/api-portfolio/customer-information/400
+  - https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+  - https://developer.accor.com/api-portfolio/facilities/105
+  - https://developer.accor.com/api-portfolio/hotel-events/100
+  - https://developer.accor.com/api-portfolio/hotel-interface/101
+  - https://developer.accor.com/api-portfolio/hotel-options/102
+  - https://developer.accor.com/api-portfolio/hotel-policies/101
+  - https://developer.accor.com/api-portfolio/hotel-rates/102
+  - https://developer.accor.com/api-portfolio/hotel-surroundings/100
+  - https://developer.accor.com/api-portfolio/hotel-taxes/101
+  - https://developer.accor.com/api-portfolio/link-loyalty-cross-rewards-program/104
+  - https://developer.accor.com/api-portfolio/loyalty-burn/133
+  - https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+  - https://developer.accor.com/api-portfolio/loyalty-generic-partner-earn-points/116
+  - https://developer.accor.com/api-portfolio/loyalty-partner-enroll/200
+  - https://developer.accor.com/api-portfolio/medias/101
+  - https://developer.accor.com/api-portfolio/payment/222
+  - https://developer.accor.com/api-portfolio/payment-interface-payment-provider/105
+  - https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+  - https://developer.accor.com/api-portfolio/properties/1016
+  - https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+  - https://developer.accor.com/api-portfolio/referential-v2/203
+  - https://developer.accor.com/api-portfolio/restaurants-v2/257
+  - https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+  - https://developer.accor.com/api-portfolio/hotel-inventory/102
+servers:
+- url: https://api.accor.com
+paths:
+  /businessoffers/v1/best-offers:
+    get:
+      operationId: get_businessoffers_v1_best_offers
+      tags:
+      - Businessoffers
+      summary: Provides access to best offers, including live rates and availability.
+      x-source: https://developer.accor.com/api-portfolio/business-offers/134
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetBusinessoffersV1BestOffersResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_businessoffers_v1_best_offers
+      tags:
+      - Businessoffers
+      summary: Provides access to best offers, including live rates and availability.
+      x-source: https://developer.accor.com/api-portfolio/business-offers/134
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostBusinessoffersV1BestOffersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostBusinessoffersV1BestOffersResponse'
+      x-evidence:
+        kind: documentation
+  /businessoffers/v1/hotels/{hotelid}/calendar/best-offers:
+    get:
+      operationId: get_businessoffers_v1_hotels_hotelid_calendar_best_offers
+      tags:
+      - Businessoffers
+      summary: Get the cheapest and best offer for each day of the searched period
+      x-source: https://developer.accor.com/api-portfolio/business-offers/134
+      parameters:
+      - name: hotelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse'
+      x-evidence:
+        kind: documentation
+  /businessoffers/v1/hotels/{hotelid}/products/offers:
+    post:
+      operationId: post_businessoffers_v1_hotels_hotelid_products_offers
+      tags:
+      - Businessoffers
+      summary: Get available offers for a specific hotel
+      x-source: https://developer.accor.com/api-portfolio/business-offers/134
+      parameters:
+      - name: hotelid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostBusinessoffersV1HotelsHotelidProductsOffersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostBusinessoffersV1HotelsHotelidProductsOffersResponse'
+      x-evidence:
+        kind: documentation
+  /businessoffers/v1/offers/{offerid}:
+    get:
+      operationId: get_businessoffers_v1_offers_offerid
+      tags:
+      - Businessoffers
+      summary: Provides partners with access to available options for offers, including the best available options for each offer.
+      x-source: https://developer.accor.com/api-portfolio/business-offers/134
+      parameters:
+      - name: offerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetBusinessoffersV1OffersOfferidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at offerId
+  /businessoffers/v1/offers/{offerid}/pricing-conditions:
+    get:
+      operationId: get_businessoffers_v1_offers_offerid_pricing_conditions
+      tags:
+      - Businessoffers
+      summary: Get pricing conditions by offer id
+      x-source: https://developer.accor.com/api-portfolio/business-offers/134
+      parameters:
+      - name: offerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetBusinessoffersV1OffersOfferidPricingConditionsResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels:
+    get:
+      operationId: get_catalog_v1_hotels
+      tags:
+      - Catalog
+      summary: Hotels search
+      x-source: https://developer.accor.com/api-portfolio/properties/1016
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{hotelId}/policies:
+    post:
+      operationId: post_catalog_v1_hotels_hotelId_policies
+      tags:
+      - Catalog
+      summary: Hotel's policies
+      description: Retrieve all descriptive information you need about a rate's policies for a given hotel.
+      x-source: https://developer.accor.com/api-portfolio/hotel-policies/101
+      parameters:
+      - name: hotelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostCatalogV1HotelsHotelidPoliciesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostCatalogV1HotelsHotelidPoliciesResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{hotelId}/taxes:
+    get:
+      operationId: get_catalog_v1_hotels_hotelId_taxes
+      tags:
+      - Catalog
+      summary: Retrieve all the information you need about taxes for a given hotel.
+      x-source: https://developer.accor.com/api-portfolio/hotel-taxes/101
+      parameters:
+      - name: hotelId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogV1HotelsHotelidTaxesResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}:
+    get:
+      operationId: get_catalog_v1_hotels_id
+      tags:
+      - Catalog
+      summary: Get hotel informations
+      x-source: https://developer.accor.com/api-portfolio/properties/1016
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/facilities/details/{facilityname}:
+    get:
+      operationId: get_catalog_v1_hotels_id_facilities_details_facilityname
+      tags:
+      - Catalog
+      summary: Retrieve all the informations you need about the facilities in Accor properties.
+      x-source: https://developer.accor.com/api-portfolio/facilities/105
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: facilityname
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/facilities/{facilitieid}:
+    get:
+      operationId: get_catalog_v1_hotels_id_facilities_facilitieid
+      tags:
+      - Catalog
+      summary: Retrieve all the informations you need about the facilities in Accor properties.
+      x-source: https://developer.accor.com/api-portfolio/facilities/105
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: facilitieid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at facilitieId
+  /catalog/v1/hotels/{id}/products/accommodations:
+    get:
+      operationId: get_catalog_v1_hotels_id_products_accommodations
+      tags:
+      - Catalog
+      summary: Retrieve all the information you need about the accommodations in Accor properties.
+      description: Returns the accommodations data for the specified hotel.
+      x-source: https://developer.accor.com/api-portfolio/accommodations/108
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogV1HotelsIdProductsAccommodationsResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/rates:
+    post:
+      operationId: post_catalog_v1_hotels_id_rates
+      tags:
+      - Catalog
+      summary: Retrieve all descriptive information you need about rates for a given hotel.
+      description: Retrieve all descriptive information you need about rates for a given hotel.
+      x-source: https://developer.accor.com/api-portfolio/hotel-rates/102
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostCatalogV1HotelsIdRatesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostCatalogV1HotelsIdRatesResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/{id}:
+    get:
+      operationId: get_catalog_v1_hotels_id_id
+      tags:
+      - Catalog
+      summary: Retrieve all the information you need about available options for a given hotel.
+      x-source: https://developer.accor.com/api-portfolio/hotel-events/100
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at id
+  /catalog/v1/inventory/hotels:
+    get:
+      operationId: get_catalog_v1_inventory_hotels
+      tags:
+      - Catalog
+      summary: Get hotels inventory
+      x-source: https://developer.accor.com/api-portfolio/hotel-inventory/102
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogV1InventoryHotelsResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v2/_search/restaurants:
+    get:
+      operationId: get_catalog_v2_search_restaurants
+      tags:
+      - Catalog
+      summary: Geographical search of restaurants
+      x-source: https://developer.accor.com/api-portfolio/restaurants-v2/257
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v2/restaurants:
+    get:
+      operationId: get_catalog_v2_restaurants
+      tags:
+      - Catalog
+      summary: Get all restaurants (base information)
+      x-source: https://developer.accor.com/api-portfolio/restaurants-v2/257
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v2/restaurants/{id}:
+    get:
+      operationId: get_catalog_v2_restaurants_id
+      tags:
+      - Catalog
+      summary: Get restaurant using id
+      x-source: https://developer.accor.com/api-portfolio/restaurants-v2/257
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /contracts:
+    get:
+      operationId: get_contracts
+      tags:
+      - Contracts
+      summary: List selectable contracts
+      description: List selectable contracts
+      x-source: https://developer.accor.com/api-portfolio/asset-contracts/100
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_contracts
+      tags:
+      - Contracts
+      summary: Create or update a contract
+      description: Create or update a contract
+      x-source: https://developer.accor.com/api-portfolio/asset-contracts/100
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /contracts/{contractNumber}:
+    get:
+      operationId: get_contracts_contractNumber
+      tags:
+      - Contracts
+      summary: Get a contract by number
+      description: Get a contract by number
+      x-source: https://developer.accor.com/api-portfolio/asset-contracts/100
+      parameters:
+      - name: contractNumber
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v1/contacts/me/subscriptions:
+    put:
+      operationId: put_customer_v1_contacts_me_subscriptions
+      tags:
+      - Customer
+      summary: authenticated contact -> Manage subscriptions for an existing contact to one or several marketing communications managed by Accor
+      x-source: https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v1/contacts/{pmid}:
+    get:
+      operationId: get_customer_v1_contacts_pmid
+      tags:
+      - Customer
+      summary: Read guest's information from his Personal Member ID
+      x-source: https://developer.accor.com/api-portfolio/customer-information/400
+      parameters:
+      - name: pmid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /healthcheck:
+    get:
+      operationId: get_healthcheck
+      tags:
+      - Healthcheck
+      summary: Health check endpoint
+      description: Endpoint to check service health
+      x-source: https://developer.accor.com/api-portfolio/asset-contracts/100
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /hotel-interface/v1/key-systems/hotels/{hotelcode}/assa-abloy:
+    delete:
+      operationId: delete_hotel_interface_v1_key_systems_hotels_hotelcode_assa_abloy
+      tags:
+      - Hotel Interface
+      summary: Delete information from key-systems
+      x-source: https://developer.accor.com/api-portfolio/hotel-interface/101
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /hotel-interface/v1/key-systems/hotels/{hotelcode}/{id}:
+    get:
+      operationId: get_hotel_interface_v1_key_systems_hotels_hotelcode_id
+      tags:
+      - Hotel Interface
+      summary: Get information from key-systems
+      x-source: https://developer.accor.com/api-portfolio/hotel-interface/101
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+    post:
+      operationId: post_hotel_interface_v1_key_systems_hotels_hotelcode_id
+      tags:
+      - Hotel Interface
+      summary: Push information to key-systems
+      x-source: https://developer.accor.com/api-portfolio/hotel-interface/101
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+  /hotel-interface/v1/pms-systems/hotels/{hotelcode}/opera-htng/extended:
+    post:
+      operationId: post_hotel_interface_v1_pms_systems_hotels_hotelcode_opera_htng_extended
+      tags:
+      - Hotel Interface
+      summary: Push information to pms-systems htng
+      x-source: https://developer.accor.com/api-portfolio/hotel-interface/101
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /hotel-interface/v1/pms-systems/hotels/{hotelcode}/{id}:
+    get:
+      operationId: get_hotel_interface_v1_pms_systems_hotels_hotelcode_id
+      tags:
+      - Hotel Interface
+      summary: Get information from pms-systems
+      x-source: https://developer.accor.com/api-portfolio/hotel-interface/101
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+    post:
+      operationId: post_hotel_interface_v1_pms_systems_hotels_hotelcode_id
+      tags:
+      - Hotel Interface
+      summary: Push information to pms-systems htng
+      x-source: https://developer.accor.com/api-portfolio/hotel-interface/101
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at id
+  /hotel-interface/v1/pos-systems/hotel/{hotelcode}/simphony:
+    post:
+      operationId: post_hotel_interface_v1_pos_systems_hotel_hotelcode_simphony
+      tags:
+      - Hotel Interface
+      summary: Push information to pos-systems
+      x-source: https://developer.accor.com/api-portfolio/hotel-interface/101
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/brand/conversionrate/{brandcode}:
+    get:
+      operationId: get_loyalty_v1_brand_conversionrate_brandcode
+      tags:
+      - Loyalty
+      summary: Retrieve a conversion rates information in order to convert euro currency value to points.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: brandcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/burn/hotelxp/conversionrate/{hotelcode}:
+    get:
+      operationId: get_loyalty_v1_burn_hotelxp_conversionrate_hotelcode
+      tags:
+      - Loyalty
+      summary: Get the Burn Conversion Rate for hotel experiences.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/burn/hotelxp/{hotelxpid}:
+    post:
+      operationId: post_loyalty_v1_burn_hotelxp_hotelxpid
+      tags:
+      - Loyalty
+      summary: Retrieve Burn eligibility to redeem Accor Loyalty Points in a payment service (Hotel Experiences release).
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: hotelxpid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1BurnHotelxpHotelxpidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1BurnHotelxpHotelxpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at hotelxpId
+  /loyalty/v1/burn/isburneligible:
+    get:
+      operationId: get_loyalty_v1_burn_isburneligible
+      tags:
+      - Loyalty
+      summary: Retrieve Burn eligibility to redeem Accor Loyalty Points in a payment service.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/burn/partnerxp/{partnerxpid}:
+    get:
+      operationId: get_loyalty_v1_burn_partnerxp_partnerxpid
+      tags:
+      - Loyalty
+      summary: Get the Burn Conversion Rate for partner experiences.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: partnerxpid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1BurnPartnerxpPartnerxpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at partnerxpId
+    post:
+      operationId: post_loyalty_v1_burn_partnerxp_partnerxpid
+      tags:
+      - Loyalty
+      summary: Partner Experiences Release Points
+      description: Provide a payment service using ALL Loyalty Points. Use for payment on partner experiences platform. You are calling with a
+        Bearer Token (OIDC JWT with PMID claim) and an Apigee API key. You are calling with a Basic Auth. Use Accor Loyalty.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: partnerxpid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1BurnPartnerxpPartnerxpidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1BurnPartnerxpPartnerxpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at partnerxpId
+  /loyalty/v1/burn/{burnid}:
+    post:
+      operationId: post_loyalty_v1_burn_burnid
+      tags:
+      - Loyalty
+      summary: Provide a payment service using ALL Loyalty Points. Use for payment on Partner platform in two ways; 1.Instantly or Directly Burn
+        Points payment process using present time date (same as current transa
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at burnId
+  /loyalty/v1/burn/{burnid}/burnpoints:
+    post:
+      operationId: post_loyalty_v1_burn_burnid_burnpoints
+      tags:
+      - Loyalty
+      summary: Provide a payment service using ALL Loyalty Points on FNB platform.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1BurnBurnidBurnpointsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1BurnBurnidBurnpointsResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at burnId
+  /loyalty/v1/burn/{burnid}/burnpoints/{transactionid}:
+    patch:
+      operationId: patch_loyalty_v1_burn_burnid_burnpoints_transactionid
+      tags:
+      - Loyalty
+      summary: Update the consumption date of an existing Hotel Experiences burn transaction.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at burnId
+  /loyalty/v1/burn/{burnid}/eligibility:
+    get:
+      operationId: get_loyalty_v1_burn_burnid_eligibility
+      tags:
+      - Loyalty
+      summary: Retrieve a Brand Burn eligibility to redeem Accor Loyalty Points in a payment service.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at burnId
+  /loyalty/v1/currencyrate/:
+    get:
+      operationId: get_loyalty_v1_currencyrate
+      tags:
+      - Loyalty
+      summary: Retrieve a currency list of exchange rate information for payment service.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/currencyrate/{currency}:
+    get:
+      operationId: get_loyalty_v1_currencyrate_currency
+      tags:
+      - Loyalty
+      summary: Retrieve a currency exchange rate for payment service.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: currency
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earn/fnb/earnpoints:
+    post:
+      operationId: post_loyalty_v1_earn_fnb_earnpoints
+      tags:
+      - Loyalty
+      summary: Allows to earn rewards points.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1EarnFnbEarnpointsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1EarnFnbEarnpointsResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earn/fnb/{transactionid}/status:
+    get:
+      operationId: get_loyalty_v1_earn_fnb_transactionid_status
+      tags:
+      - Loyalty
+      summary: Allows to know the status of the earn operation.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+      parameters:
+      - name: transactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1EarnFnbTransactionidStatusResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earnPartner:
+    post:
+      operationId: post_loyalty_v1_earnPartner
+      tags:
+      - Loyalty
+      summary: Earn Partner Loyalty Points Conversion
+      description: Earn Partner Loyalty Points Conversion
+      x-source: https://developer.accor.com/api-portfolio/loyalty-generic-partner-earn-points/116
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earnburnrates/{partnercode}:
+    get:
+      operationId: get_loyalty_v1_earnburnrates_partnercode
+      tags:
+      - Loyalty
+      summary: Retrieve a conversion rates information in order to convert euro currency value to points.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: partnercode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/fnb/conversionrate/{hotelcode}:
+    get:
+      operationId: get_loyalty_v1_fnb_conversionrate_hotelcode
+      tags:
+      - Loyalty
+      summary: Retrieve a conversion rates information in order to convert euro currency value to points.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/members/{pmid}/{id}:
+    post:
+      operationId: post_loyalty_v1_members_pmid_id
+      tags:
+      - Loyalty
+      summary: Link your account member.
+      description: You are calling with a Bearer Token. Access token key (API key with PMID).
+      x-source: https://developer.accor.com/api-portfolio/link-loyalty-cross-rewards-program/104
+      parameters:
+      - name: pmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1MembersPmidIdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1MembersPmidIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+  /loyalty/v1/referentials/loyalty-cards/thresholds:
+    get:
+      operationId: get_loyalty_v1_referentials_loyalty_cards_thresholds
+      tags:
+      - Loyalty
+      summary: Retrieve list of thresholds cards.
+      x-source: https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/referentials/loyalty-cards/thresholds/promotional-offers/{promotionalCode}:
+    get:
+      operationId: get_loyalty_v1_referentials_loyalty_cards_thresholds_promotional_offers_promotio
+      tags:
+      - Loyalty
+      summary: Retrieve list of thresholds cards by promotional code offer.
+      x-source: https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+      parameters:
+      - name: promotionalCode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/{v1id}/burnpoints:
+    post:
+      operationId: post_loyalty_v1_v1id_burnpoints
+      tags:
+      - Loyalty
+      summary: Provide a payment service using ALL Loyalty Points. Use for payment on Brand platform.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /loyalty/v1/{v1id}/releasepoints:
+    post:
+      operationId: post_loyalty_v1_v1id_releasepoints
+      tags:
+      - Loyalty
+      summary: 'Following a burn operation (via the brand burn points service) by the Accor group brand entities (Hotels, Spas, Restaurants, etc.),
+        points are temporarily blocked while the burn request is processed. '
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at v1Id
+  /loyalty/v2.0/partner/enroll:
+    post:
+      operationId: post_loyalty_v2_0_partner_enroll
+      tags:
+      - Loyalty
+      summary: Enroll a new member from an external website or app.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-partner-enroll/200
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV20PartnerEnrollRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV20PartnerEnrollResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v1/interface/terminalprovider/{terminalproviderid}:
+    post:
+      operationId: post_payment_v1_interface_terminalprovider_terminalproviderid
+      tags:
+      - Payment
+      summary: Cancel a Preauthorization.
+      x-source: https://developer.accor.com/api-portfolio/payment-interface-payment-provider/105
+      parameters:
+      - name: terminalproviderid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 7 example path(s) differing only at terminalproviderId
+  /payment/v2/cards/{paymenttransactionid}:
+    get:
+      operationId: get_payment_v2_cards_paymenttransactionid
+      tags:
+      - Payment
+      summary: Retrieve the credit card data from ACCOR Vault
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2CardsPaymenttransactionidResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/cards/{paymenttransactionid}/purge:
+    put:
+      operationId: put_payment_v2_cards_paymenttransactionid_purge
+      tags:
+      - Payment
+      summary: Delete a credit card from ACCOR Vault
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutPaymentV2CardsPaymenttransactionidPurgeResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/merchants/paymentMeans:
+    get:
+      operationId: get_payment_v2_merchants_paymentMeans
+      tags:
+      - Payment
+      summary: Retrieve the list of available payment methods for a merchant
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2MerchantsPaymentmeansResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/referential/cards:
+    get:
+      operationId: get_payment_v2_referential_cards
+      tags:
+      - Payment
+      summary: Retrieve all credit card patterns for surface controls
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2ReferentialCardsResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/sessions/{paymentsessionid}/transactions:
+    post:
+      operationId: post_payment_v2_sessions_paymentsessionid_transactions
+      tags:
+      - Payment
+      summary: Retrieve all the elements necessary to the checkout page to initialize a payment transaction related to a list of items.
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymentsessionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2SessionsPaymentsessionidTransactionsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2SessionsPaymentsessionidTransactionsResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/sessions/{paymentsessionid}/transactions/{paymenttransactionid}:
+    delete:
+      operationId: delete_payment_v2_sessions_paymentsessionid_transactions_paymenttransactionid
+      tags:
+      - Payment
+      summary: Cancel a transaction.
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymentsessionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr'
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_payment_v2_sessions_paymentsessionid_transactions_paymenttransactionid
+      tags:
+      - Payment
+      summary: Retrieve all the elements necessary to the checkout page to initialize a payment transaction related to a current transaction.
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymentsessionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans'
+      x-evidence:
+        kind: documentation
+  /payment/v2/transactions/{paymenttransactionid}/wallet/tokenization:
+    post:
+      operationId: post_payment_v2_transactions_paymenttransactionid_wallet_tokenization
+      tags:
+      - Payment
+      summary: Tokenize a WALLET credit card
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat2'
+      x-evidence:
+        kind: documentation
+  /payment/v2/transactions/{paymenttransactionid}/{id}:
+    get:
+      operationId: get_payment_v2_transactions_paymenttransactionid_id
+      tags:
+      - Payment
+      summary: Returns the list of operations associated with a transaction
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2TransactionsPaymenttransactionidIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+    post:
+      operationId: post_payment_v2_transactions_paymenttransactionid_id
+      tags:
+      - Payment
+      summary: Try a payment intent with or without payment facilities
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidIdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at id
+  /payment/v2/{v2id}:
+    post:
+      operationId: post_payment_v2_v2id
+      tags:
+      - Payment
+      summary: Tokenize a credit card into ACCOR Vault
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2V2IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2V2IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v2Id
+  /private_publication_check/v2/quiq/webhook:
+    post:
+      operationId: post_private_publication_check_v2_quiq_webhook
+      tags:
+      - Private Publication Check
+      summary: Quiq webhook
+      x-source: https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /private_publication_check/v2/{v2id}:
+    get:
+      operationId: get_private_publication_check_v2_v2id
+      tags:
+      - Private Publication Check
+      summary: Health check
+      x-source: https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at v2Id
+    post:
+      operationId: post_private_publication_check_v2_v2id
+      tags:
+      - Private Publication Check
+      summary: Streaming agent
+      x-source: https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 7 example path(s) differing only at v2Id
+  /referentials/v2/{v2id}:
+    get:
+      operationId: get_referentials_v2_v2id
+      tags:
+      - Referentials
+      summary: Referential amenity
+      x-source: https://developer.accor.com/api-portfolio/referential-v2/203
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v2Id
+  /secure/customer/v1/contacts/register/subscription:
+    post:
+      operationId: post_secure_customer_v1_contacts_register_subscription
+      tags:
+      - Secure
+      summary: Non authenticated contact -> Manage subscriptions (only opt-in) for a given contact. If the contact is found (search), the subscription
+        will be added. If the contact is not found, he will be created w
+      x-source: https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /test_travel_concierge_new/v2/quiq/webhook:
+    post:
+      operationId: post_test_travel_concierge_new_v2_quiq_webhook
+      tags:
+      - Test Travel Concierge New
+      summary: Quiq webhook
+      x-source: https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /test_travel_concierge_new/v2/{v2id}:
+    get:
+      operationId: get_test_travel_concierge_new_v2_v2id
+      tags:
+      - Test Travel Concierge New
+      summary: Health check
+      x-source: https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at v2Id
+    post:
+      operationId: post_test_travel_concierge_new_v2_v2id
+      tags:
+      - Test Travel Concierge New
+      summary: Streaming agent
+      x-source: https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 7 example path(s) differing only at v2Id
+  /wallet/v2/cards/{customerid}:
+    delete:
+      operationId: delete_wallet_v2_cards_customerid
+      tags:
+      - Wallet
+      summary: Delete a credit card from the Accor Wallet
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: customerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteWalletV2CardsCustomeridResponse'
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_wallet_v2_cards_customerid
+      tags:
+      - Wallet
+      summary: Modify an active credit card from the Accor Wallet
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: customerid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchWalletV2CardsCustomeridRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchWalletV2CardsCustomeridResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_wallet_v2_cards_customerid
+      tags:
+      - Wallet
+      summary: Register a credit card into the Accor Wallet.
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: customerid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostWalletV2CardsCustomeridRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostWalletV2CardsCustomeridResponse'
+      x-evidence:
+        kind: documentation
+  /wallet/v2/cards/{customerid}/tokens:
+    get:
+      operationId: get_wallet_v2_cards_customerid_tokens
+      tags:
+      - Wallet
+      summary: Retrieve the customer credit cards registered into ACCOR Wallet
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: customerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetWalletV2CardsCustomeridTokensResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetBusinessoffersV1BestOffersResponse:
+      type: object
+      properties:
+        BestOfferResponse:
+          type: object
+    PostBusinessoffersV1BestOffersRequest:
+      type: object
+      properties:
+        BestOfferRequest:
+          type: object
+    PostBusinessoffersV1BestOffersResponse:
+      type: object
+      properties:
+        BestOfferResponse:
+          type: object
+    GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse:
+      type: object
+      properties:
+        CalendarBestOffersResponse:
+          type: object
+    PostBusinessoffersV1HotelsHotelidProductsOffersRequest:
+      type: object
+      properties:
+        OfferRequest:
+          type: object
+    PostBusinessoffersV1HotelsHotelidProductsOffersResponse:
+      type: object
+      properties:
+        OffersResponse:
+          type: object
+    GetBusinessoffersV1OffersOfferidResponse:
+      type: object
+      properties:
+        OptionResponse:
+          type: object
+    GetBusinessoffersV1OffersOfferidPricingConditionsResponse:
+      type: object
+      properties:
+        PricingConditionsResponse:
+          type: object
+    PostCatalogV1HotelsHotelidPoliciesRequest:
+      type: object
+      properties:
+        PoliciesIn:
+          type: object
+    PostCatalogV1HotelsHotelidPoliciesResponse:
+      type: object
+      properties:
+        Policies:
+          type: object
+        TranslatedLabel:
+          type: object
+        Period:
+          type: object
+        Error:
+          type: object
+    GetCatalogV1HotelsHotelidTaxesResponse:
+      type: object
+      properties:
+        Taxes:
+          type: object
+          description: Taxes information.
+        Code:
+          type: object
+          description: Tax code.
+        TranslatedLabel:
+          type: object
+          description: Label translated in different languages.
+        CodeWithTranslatedLabels:
+          type: object
+          description: Tax code with translated labels.
+        Error:
+          type: object
+          description: Error object.
+    GetCatalogV1HotelsIdProductsAccommodationsResponse:
+      type: object
+      properties:
+        ProductsAccommodationsDto:
+          type: object
+    PostCatalogV1HotelsIdRatesRequest:
+      type: object
+      properties:
+        RatesIn:
+          type: object
+          description: Input payload for rates
+      required:
+      - RatesIn
+    PostCatalogV1HotelsIdRatesResponse:
+      type: object
+      properties:
+        Rates:
+          type: object
+          description: Successful response containing rates
+        Error:
+          type: object
+          description: Error response
+    GetCatalogV1InventoryHotelsResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Successful response with hotel inventory list
+        default:
+          type: string
+          description: Error response
+    GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse:
+      type: object
+      properties:
+        BurnPointsRatio:
+          type: object
+    PostLoyaltyV1BurnHotelxpHotelxpidRequest:
+      type: object
+      properties:
+        ReleasePointRequest:
+          type: object
+      required:
+      - ReleasePointRequest
+    PostLoyaltyV1BurnHotelxpHotelxpidResponse:
+      type: object
+      properties:
+        ReleasePointResponse:
+          type: object
+    GetLoyaltyV1BurnPartnerxpPartnerxpidResponse:
+      type: object
+      properties:
+        BurnPointsRatio:
+          type: object
+    PostLoyaltyV1BurnPartnerxpPartnerxpidRequest:
+      type: object
+      properties:
+        PartnerReleasePointRequest:
+          type: object
+          description: Request body for releasing partner experience points
+      required:
+      - PartnerReleasePointRequest
+    PostLoyaltyV1BurnPartnerxpPartnerxpidResponse:
+      type: object
+      properties:
+        ReleasePointResponse:
+          type: object
+          description: Response body after releasing points
+    PostLoyaltyV1BurnBurnidBurnpointsRequest:
+      type: object
+      properties:
+        FnbBurnPointRequest:
+          type: object
+      required:
+      - FnbBurnPointRequest
+    PostLoyaltyV1BurnBurnidBurnpointsResponse:
+      type: object
+      properties:
+        FnbBurnPointResponse:
+          type: object
+    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest:
+      type: object
+      properties:
+        UpdateDebitDateRequest:
+          type: object
+      required:
+      - UpdateDebitDateRequest
+    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse:
+      type: object
+      properties:
+        UpdateDebitDateResponse:
+          type: object
+    PostLoyaltyV1EarnFnbEarnpointsRequest:
+      type: object
+      properties:
+        FnbEarnPointRequest:
+          type: object
+    PostLoyaltyV1EarnFnbEarnpointsResponse:
+      type: object
+      properties:
+        FnbEarnPointResponse:
+          type: object
+    GetLoyaltyV1EarnFnbTransactionidStatusResponse:
+      type: object
+      properties:
+        FnbEarnStatusResponse:
+          type: object
+    PostLoyaltyV1MembersPmidIdRequest:
+      type: object
+      properties:
+        LinkRequest:
+          type: object
+    PostLoyaltyV1MembersPmidIdResponse:
+      type: object
+      properties:
+        LinkResponseEntity:
+          type: object
+    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse:
+      type: object
+      properties:
+        ReferentialsResponseEntity:
+          type: object
+        ReferentialsPartnerResponseEntity:
+          type: object
+        GenericError:
+          type: object
+    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff:
+      type: object
+      properties:
+        ReferentialsResponseEntity:
+          type: object
+        ReferentialsPartnerResponseEntity:
+          type: object
+        GenericError:
+          type: object
+    PostLoyaltyV20PartnerEnrollRequest:
+      type: object
+      properties:
+        partnerEnrollRequestBody:
+          type: object
+      required:
+      - partnerEnrollRequestBody
+    PostLoyaltyV20PartnerEnrollResponse:
+      type: object
+      properties:
+        partnerEnrollResponse:
+          type: object
+        errorBackend:
+          type: object
+        errorApigee:
+          type: object
+    PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ:
+      type: object
+      properties:
+        CancelRequest:
+          type: object
+      required:
+      - CancelRequest
+    PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp:
+      type: object
+      properties:
+        CheckResponse:
+          type: object
+    GetPaymentV2CardsPaymenttransactionidResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PutPaymentV2CardsPaymenttransactionidPurgeResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    GetPaymentV2MerchantsPaymentmeansResponse:
+      type: object
+      properties:
+        body:
+          type: object
+    GetPaymentV2ReferentialCardsResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV2SessionsPaymentsessionidTransactionsRequest:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    PostPaymentV2SessionsPaymentsessionidTransactionsResponse:
+      type: object
+      properties:
+        body:
+          type: object
+    DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr:
+      type: object
+      properties:
+        body:
+          type: object
+    GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans:
+      type: object
+      properties:
+        body:
+          type: object
+    PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat2:
+      type: object
+      properties:
+        body:
+          type: object
+    GetPaymentV2TransactionsPaymenttransactionidIdResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV2TransactionsPaymenttransactionidIdRequest:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    PostPaymentV2TransactionsPaymenttransactionidIdResponse:
+      type: object
+      properties:
+        body:
+          type: object
+    PostPaymentV2V2IdRequest:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV2V2IdResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    DeleteWalletV2CardsCustomeridResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PatchWalletV2CardsCustomeridRequest:
+      type: object
+      properties:
+        object:
+          type: object
+    PatchWalletV2CardsCustomeridResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostWalletV2CardsCustomeridRequest:
+      type: object
+      properties:
+        object:
+          type: object
+    PostWalletV2CardsCustomeridResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    GetWalletV2CardsCustomeridTokensResponse:
+      type: object
+      properties:
+        object:
+          type: object
+tags:
+- name: Businessoffers
+- name: Catalog
+- name: Contracts
+- name: Customer
+- name: Healthcheck
+- name: Hotel Interface
+- name: Loyalty
+- name: Payment
+- name: Private Publication Check
+- name: Referentials
+- name: Secure
+- name: Test Travel Concierge New
+- name: Wallet
