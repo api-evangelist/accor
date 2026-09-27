@@ -1,0 +1,660 @@
+openapi: 3.2.0
+info:
+  title: Accor Loyalty API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 79 operation(s) read from 28 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Accor has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 79
+    pages-with-code: 0
+    pages-read: 28
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.accor.com/api-portfolio/accommodations/108
+  - https://developer.accor.com/api-portfolio/asset-contracts/100
+  - https://developer.accor.com/api-portfolio/business-offers/134
+  - https://developer.accor.com/api-portfolio/customer-information/400
+  - https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+  - https://developer.accor.com/api-portfolio/facilities/105
+  - https://developer.accor.com/api-portfolio/hotel-events/100
+  - https://developer.accor.com/api-portfolio/hotel-interface/101
+  - https://developer.accor.com/api-portfolio/hotel-options/102
+  - https://developer.accor.com/api-portfolio/hotel-policies/101
+  - https://developer.accor.com/api-portfolio/hotel-rates/102
+  - https://developer.accor.com/api-portfolio/hotel-surroundings/100
+  - https://developer.accor.com/api-portfolio/hotel-taxes/101
+  - https://developer.accor.com/api-portfolio/link-loyalty-cross-rewards-program/104
+  - https://developer.accor.com/api-portfolio/loyalty-burn/133
+  - https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+  - https://developer.accor.com/api-portfolio/loyalty-generic-partner-earn-points/116
+  - https://developer.accor.com/api-portfolio/loyalty-partner-enroll/200
+  - https://developer.accor.com/api-portfolio/medias/101
+  - https://developer.accor.com/api-portfolio/payment/222
+  - https://developer.accor.com/api-portfolio/payment-interface-payment-provider/105
+  - https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+  - https://developer.accor.com/api-portfolio/properties/1016
+  - https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+  - https://developer.accor.com/api-portfolio/referential-v2/203
+  - https://developer.accor.com/api-portfolio/restaurants-v2/257
+  - https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+  - https://developer.accor.com/api-portfolio/hotel-inventory/102
+servers:
+- url: https://api.accor.com
+tags:
+- name: Loyalty
+paths:
+  /loyalty/v1/brand/conversionrate/{brandcode}:
+    get:
+      operationId: get_loyalty_v1_brand_conversionrate_brandcode
+      tags:
+      - Loyalty
+      summary: Retrieve a conversion rates information in order to convert euro currency value…
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: brandcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/burn/hotelxp/conversionrate/{hotelcode}:
+    get:
+      operationId: get_loyalty_v1_burn_hotelxp_conversionrate_hotelcode
+      tags:
+      - Loyalty
+      summary: Get the Burn Conversion Rate for hotel experiences
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/burn/hotelxp/{hotelxpid}:
+    post:
+      operationId: post_loyalty_v1_burn_hotelxp_hotelxpid
+      tags:
+      - Loyalty
+      summary: Retrieve Burn eligibility to redeem Accor Loyalty Points in a payment service…
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: hotelxpid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1BurnHotelxpHotelxpidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1BurnHotelxpHotelxpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at hotelxpId
+  /loyalty/v1/burn/isburneligible:
+    get:
+      operationId: get_loyalty_v1_burn_isburneligible
+      tags:
+      - Loyalty
+      summary: Retrieve Burn eligibility to redeem Accor Loyalty Points in a payment service
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/burn/partnerxp/{partnerxpid}:
+    get:
+      operationId: get_loyalty_v1_burn_partnerxp_partnerxpid
+      tags:
+      - Loyalty
+      summary: Get the Burn Conversion Rate for partner experiences
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: partnerxpid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1BurnPartnerxpPartnerxpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at partnerxpId
+    post:
+      operationId: post_loyalty_v1_burn_partnerxp_partnerxpid
+      tags:
+      - Loyalty
+      summary: Partner Experiences Release Points
+      description: Provide a payment service using ALL Loyalty Points. Use for payment on partner experiences platform. You are calling with a Bearer Token (OIDC JWT with PMID claim) and an Apigee API key. You are calling with a Basic Auth. Use Accor Loyalty.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: partnerxpid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1BurnPartnerxpPartnerxpidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1BurnPartnerxpPartnerxpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at partnerxpId
+  /loyalty/v1/burn/{burnid}:
+    post:
+      operationId: post_loyalty_v1_burn_burnid
+      tags:
+      - Loyalty
+      summary: Provide a payment service using ALL Loyalty Points.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at burnId
+  /loyalty/v1/burn/{burnid}/burnpoints:
+    post:
+      operationId: post_loyalty_v1_burn_burnid_burnpoints
+      tags:
+      - Loyalty
+      summary: Provide a payment service using ALL Loyalty Points on FNB platform
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1BurnBurnidBurnpointsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1BurnBurnidBurnpointsResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at burnId
+  /loyalty/v1/burn/{burnid}/burnpoints/{transactionid}:
+    patch:
+      operationId: patch_loyalty_v1_burn_burnid_burnpoints_transactionid
+      tags:
+      - Loyalty
+      summary: Update the consumption date of an existing Hotel Experiences burn transaction
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at burnId
+  /loyalty/v1/burn/{burnid}/eligibility:
+    get:
+      operationId: get_loyalty_v1_burn_burnid_eligibility
+      tags:
+      - Loyalty
+      summary: Retrieve a Brand Burn eligibility to redeem Accor Loyalty Points in a payment…
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: burnid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at burnId
+  /loyalty/v1/currencyrate/:
+    get:
+      operationId: get_loyalty_v1_currencyrate
+      tags:
+      - Loyalty
+      summary: Retrieve a currency list of exchange rate information for payment service
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/currencyrate/{currency}:
+    get:
+      operationId: get_loyalty_v1_currencyrate_currency
+      tags:
+      - Loyalty
+      summary: Retrieve a currency exchange rate for payment service
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: currency
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earn/fnb/earnpoints:
+    post:
+      operationId: post_loyalty_v1_earn_fnb_earnpoints
+      tags:
+      - Loyalty
+      summary: Allows to earn rewards points
+      x-source: https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1EarnFnbEarnpointsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1EarnFnbEarnpointsResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earn/fnb/{transactionid}/status:
+    get:
+      operationId: get_loyalty_v1_earn_fnb_transactionid_status
+      tags:
+      - Loyalty
+      summary: Allows to know the status of the earn operation
+      x-source: https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+      parameters:
+      - name: transactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1EarnFnbTransactionidStatusResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earnPartner:
+    post:
+      operationId: post_loyalty_v1_earnPartner
+      tags:
+      - Loyalty
+      summary: Earn Partner Loyalty Points Conversion
+      x-source: https://developer.accor.com/api-portfolio/loyalty-generic-partner-earn-points/116
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/earnburnrates/{partnercode}:
+    get:
+      operationId: get_loyalty_v1_earnburnrates_partnercode
+      tags:
+      - Loyalty
+      summary: Retrieve a conversion rates information in order to convert euro currency value…
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: partnercode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/fnb/conversionrate/{hotelcode}:
+    get:
+      operationId: get_loyalty_v1_fnb_conversionrate_hotelcode
+      tags:
+      - Loyalty
+      summary: Retrieve a conversion rates information in order to convert euro currency value…
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: hotelcode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/members/{pmid}/{id}:
+    post:
+      operationId: post_loyalty_v1_members_pmid_id
+      tags:
+      - Loyalty
+      summary: Link your account member
+      description: You are calling with a Bearer Token. Access token key (API key with PMID).
+      x-source: https://developer.accor.com/api-portfolio/link-loyalty-cross-rewards-program/104
+      parameters:
+      - name: pmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV1MembersPmidIdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV1MembersPmidIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+  /loyalty/v1/referentials/loyalty-cards/thresholds:
+    get:
+      operationId: get_loyalty_v1_referentials_loyalty_cards_thresholds
+      tags:
+      - Loyalty
+      summary: Retrieve list of thresholds cards
+      x-source: https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/referentials/loyalty-cards/thresholds/promotional-offers/{promotionalCode}:
+    get:
+      operationId: get_loyalty_v1_referentials_loyalty_cards_thresholds_promotional_offers_promotio
+      tags:
+      - Loyalty
+      summary: Retrieve list of thresholds cards by promotional code offer
+      x-source: https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+      parameters:
+      - name: promotionalCode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff'
+      x-evidence:
+        kind: documentation
+  /loyalty/v1/{v1id}/burnpoints:
+    post:
+      operationId: post_loyalty_v1_v1id_burnpoints
+      tags:
+      - Loyalty
+      summary: Provide a payment service using ALL Loyalty Points.
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /loyalty/v1/{v1id}/releasepoints:
+    post:
+      operationId: post_loyalty_v1_v1id_releasepoints
+      tags:
+      - Loyalty
+      summary: Following a burn operation (via the brand burn points service) by the Accor…
+      x-source: https://developer.accor.com/api-portfolio/loyalty-burn/133
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at v1Id
+  /loyalty/v2.0/partner/enroll:
+    post:
+      operationId: post_loyalty_v2_0_partner_enroll
+      tags:
+      - Loyalty
+      summary: Enroll a new member from an external website or app
+      x-source: https://developer.accor.com/api-portfolio/loyalty-partner-enroll/200
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLoyaltyV20PartnerEnrollRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLoyaltyV20PartnerEnrollResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostLoyaltyV1BurnHotelxpHotelxpidRequest:
+      type: object
+      properties:
+        ReleasePointRequest:
+          type: object
+      required:
+      - ReleasePointRequest
+    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse:
+      type: object
+      properties:
+        ReferentialsResponseEntity:
+          type: object
+        ReferentialsPartnerResponseEntity:
+          type: object
+        GenericError:
+          type: object
+    GetLoyaltyV1EarnFnbTransactionidStatusResponse:
+      type: object
+      properties:
+        FnbEarnStatusResponse:
+          type: object
+    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff:
+      type: object
+      properties:
+        ReferentialsResponseEntity:
+          type: object
+        ReferentialsPartnerResponseEntity:
+          type: object
+        GenericError:
+          type: object
+    PostLoyaltyV1BurnBurnidBurnpointsResponse:
+      type: object
+      properties:
+        FnbBurnPointResponse:
+          type: object
+    PostLoyaltyV1BurnBurnidBurnpointsRequest:
+      type: object
+      properties:
+        FnbBurnPointRequest:
+          type: object
+      required:
+      - FnbBurnPointRequest
+    GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse:
+      type: object
+      properties:
+        BurnPointsRatio:
+          type: object
+    PostLoyaltyV1BurnHotelxpHotelxpidResponse:
+      type: object
+      properties:
+        ReleasePointResponse:
+          type: object
+    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse:
+      type: object
+      properties:
+        UpdateDebitDateResponse:
+          type: object
+    PostLoyaltyV1EarnFnbEarnpointsResponse:
+      type: object
+      properties:
+        FnbEarnPointResponse:
+          type: object
+    PostLoyaltyV20PartnerEnrollResponse:
+      type: object
+      properties:
+        partnerEnrollResponse:
+          type: object
+        errorBackend:
+          type: object
+        errorApigee:
+          type: object
+    PostLoyaltyV1BurnPartnerxpPartnerxpidRequest:
+      type: object
+      properties:
+        PartnerReleasePointRequest:
+          type: object
+          description: Request body for releasing partner experience points
+      required:
+      - PartnerReleasePointRequest
+    PostLoyaltyV1EarnFnbEarnpointsRequest:
+      type: object
+      properties:
+        FnbEarnPointRequest:
+          type: object
+    GetLoyaltyV1BurnPartnerxpPartnerxpidResponse:
+      type: object
+      properties:
+        BurnPointsRatio:
+          type: object
+    PostLoyaltyV20PartnerEnrollRequest:
+      type: object
+      properties:
+        partnerEnrollRequestBody:
+          type: object
+      required:
+      - partnerEnrollRequestBody
+    PostLoyaltyV1MembersPmidIdResponse:
+      type: object
+      properties:
+        LinkResponseEntity:
+          type: object
+    PostLoyaltyV1MembersPmidIdRequest:
+      type: object
+      properties:
+        LinkRequest:
+          type: object
+    PostLoyaltyV1BurnPartnerxpPartnerxpidResponse:
+      type: object
+      properties:
+        ReleasePointResponse:
+          type: object
+          description: Response body after releasing points
+    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest:
+      type: object
+      properties:
+        UpdateDebitDateRequest:
+          type: object
+      required:
+      - UpdateDebitDateRequest

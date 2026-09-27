@@ -1,0 +1,30 @@
+{
+  "provider": "accor",
+  "sources": [
+    "_ae-authored/accor-openapi-generated.yml"
+  ],
+  "outputs": [
+    "accor-businessoffers-api-openapi.yml",
+    "accor-catalog-api-openapi.yml",
+    "accor-contracts-api-openapi.yml",
+    "accor-customer-api-openapi.yml",
+    "accor-healthcheck-api-openapi.yml",
+    "accor-hotel-interface-api-openapi.yml",
+    "accor-loyalty-api-openapi.yml",
+    "accor-payment-api-openapi.yml",
+    "accor-private-publication-check-api-openapi.yml",
+    "accor-referentials-api-openapi.yml",
+    "accor-secure-api-openapi.yml",
+    "accor-test-travel-concierge-new-api-openapi.yml",
+    "accor-wallet-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "accor-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+13 apis, 13 total)"
+  ],
+  "skipped": []
+}

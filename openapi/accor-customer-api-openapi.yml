@@ -1,0 +1,80 @@
+openapi: 3.2.0
+info:
+  title: Accor Customer API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 79 operation(s) read from 28 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Accor has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 79
+    pages-with-code: 0
+    pages-read: 28
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.accor.com/api-portfolio/accommodations/108
+  - https://developer.accor.com/api-portfolio/asset-contracts/100
+  - https://developer.accor.com/api-portfolio/business-offers/134
+  - https://developer.accor.com/api-portfolio/customer-information/400
+  - https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+  - https://developer.accor.com/api-portfolio/facilities/105
+  - https://developer.accor.com/api-portfolio/hotel-events/100
+  - https://developer.accor.com/api-portfolio/hotel-interface/101
+  - https://developer.accor.com/api-portfolio/hotel-options/102
+  - https://developer.accor.com/api-portfolio/hotel-policies/101
+  - https://developer.accor.com/api-portfolio/hotel-rates/102
+  - https://developer.accor.com/api-portfolio/hotel-surroundings/100
+  - https://developer.accor.com/api-portfolio/hotel-taxes/101
+  - https://developer.accor.com/api-portfolio/link-loyalty-cross-rewards-program/104
+  - https://developer.accor.com/api-portfolio/loyalty-burn/133
+  - https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+  - https://developer.accor.com/api-portfolio/loyalty-generic-partner-earn-points/116
+  - https://developer.accor.com/api-portfolio/loyalty-partner-enroll/200
+  - https://developer.accor.com/api-portfolio/medias/101
+  - https://developer.accor.com/api-portfolio/payment/222
+  - https://developer.accor.com/api-portfolio/payment-interface-payment-provider/105
+  - https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+  - https://developer.accor.com/api-portfolio/properties/1016
+  - https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+  - https://developer.accor.com/api-portfolio/referential-v2/203
+  - https://developer.accor.com/api-portfolio/restaurants-v2/257
+  - https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+  - https://developer.accor.com/api-portfolio/hotel-inventory/102
+servers:
+- url: https://api.accor.com
+tags:
+- name: Customer
+paths:
+  /customer/v1/contacts/me/subscriptions:
+    put:
+      operationId: put_customer_v1_contacts_me_subscriptions
+      tags:
+      - Customer
+      summary: authenticated contact -> Manage subscriptions for an existing contact to one or…
+      x-source: https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v1/contacts/{pmid}:
+    get:
+      operationId: get_customer_v1_contacts_pmid
+      tags:
+      - Customer
+      summary: Read guest's information from his Personal Member ID
+      x-source: https://developer.accor.com/api-portfolio/customer-information/400
+      parameters:
+      - name: pmid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation

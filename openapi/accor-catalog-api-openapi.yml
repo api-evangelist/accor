@@ -1,0 +1,379 @@
+openapi: 3.2.0
+info:
+  title: Accor Catalog API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 79 operation(s) read from 28 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Accor has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 79
+    pages-with-code: 0
+    pages-read: 28
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.accor.com/api-portfolio/accommodations/108
+  - https://developer.accor.com/api-portfolio/asset-contracts/100
+  - https://developer.accor.com/api-portfolio/business-offers/134
+  - https://developer.accor.com/api-portfolio/customer-information/400
+  - https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+  - https://developer.accor.com/api-portfolio/facilities/105
+  - https://developer.accor.com/api-portfolio/hotel-events/100
+  - https://developer.accor.com/api-portfolio/hotel-interface/101
+  - https://developer.accor.com/api-portfolio/hotel-options/102
+  - https://developer.accor.com/api-portfolio/hotel-policies/101
+  - https://developer.accor.com/api-portfolio/hotel-rates/102
+  - https://developer.accor.com/api-portfolio/hotel-surroundings/100
+  - https://developer.accor.com/api-portfolio/hotel-taxes/101
+  - https://developer.accor.com/api-portfolio/link-loyalty-cross-rewards-program/104
+  - https://developer.accor.com/api-portfolio/loyalty-burn/133
+  - https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+  - https://developer.accor.com/api-portfolio/loyalty-generic-partner-earn-points/116
+  - https://developer.accor.com/api-portfolio/loyalty-partner-enroll/200
+  - https://developer.accor.com/api-portfolio/medias/101
+  - https://developer.accor.com/api-portfolio/payment/222
+  - https://developer.accor.com/api-portfolio/payment-interface-payment-provider/105
+  - https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+  - https://developer.accor.com/api-portfolio/properties/1016
+  - https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+  - https://developer.accor.com/api-portfolio/referential-v2/203
+  - https://developer.accor.com/api-portfolio/restaurants-v2/257
+  - https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+  - https://developer.accor.com/api-portfolio/hotel-inventory/102
+servers:
+- url: https://api.accor.com
+tags:
+- name: Catalog
+paths:
+  /catalog/v1/hotels:
+    get:
+      operationId: get_catalog_v1_hotels
+      tags:
+      - Catalog
+      summary: Hotels search
+      x-source: https://developer.accor.com/api-portfolio/properties/1016
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{hotelId}/policies:
+    post:
+      operationId: post_catalog_v1_hotels_hotelId_policies
+      tags:
+      - Catalog
+      summary: Hotel's policies
+      description: Retrieve all descriptive information you need about a rate's policies for a given hotel.
+      x-source: https://developer.accor.com/api-portfolio/hotel-policies/101
+      parameters:
+      - name: hotelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostCatalogV1HotelsHotelidPoliciesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostCatalogV1HotelsHotelidPoliciesResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{hotelId}/taxes:
+    get:
+      operationId: get_catalog_v1_hotels_hotelId_taxes
+      tags:
+      - Catalog
+      summary: Retrieve all the information you need about taxes for a given hotel
+      x-source: https://developer.accor.com/api-portfolio/hotel-taxes/101
+      parameters:
+      - name: hotelId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogV1HotelsHotelidTaxesResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}:
+    get:
+      operationId: get_catalog_v1_hotels_id
+      tags:
+      - Catalog
+      summary: Get hotel informations
+      x-source: https://developer.accor.com/api-portfolio/properties/1016
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/facilities/details/{facilityname}:
+    get:
+      operationId: get_catalog_v1_hotels_id_facilities_details_facilityname
+      tags:
+      - Catalog
+      summary: Retrieve all the informations you need about the facilities in Accor properties
+      x-source: https://developer.accor.com/api-portfolio/facilities/105
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: facilityname
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/facilities/{facilitieid}:
+    get:
+      operationId: get_catalog_v1_hotels_id_facilities_facilitieid
+      tags:
+      - Catalog
+      summary: Retrieve all the informations you need about the facilities in Accor properties
+      x-source: https://developer.accor.com/api-portfolio/facilities/105
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: facilitieid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at facilitieId
+  /catalog/v1/hotels/{id}/products/accommodations:
+    get:
+      operationId: get_catalog_v1_hotels_id_products_accommodations
+      tags:
+      - Catalog
+      summary: Retrieve all the information you need about the accommodations in Accor…
+      description: Returns the accommodations data for the specified hotel.
+      x-source: https://developer.accor.com/api-portfolio/accommodations/108
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogV1HotelsIdProductsAccommodationsResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/rates:
+    post:
+      operationId: post_catalog_v1_hotels_id_rates
+      tags:
+      - Catalog
+      summary: Retrieve all descriptive information you need about rates for a given hotel
+      description: Retrieve all descriptive information you need about rates for a given hotel.
+      x-source: https://developer.accor.com/api-portfolio/hotel-rates/102
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostCatalogV1HotelsIdRatesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostCatalogV1HotelsIdRatesResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v1/hotels/{id}/{id}:
+    get:
+      operationId: get_catalog_v1_hotels_id_id
+      tags:
+      - Catalog
+      summary: Retrieve all the information you need about available options for a given hotel
+      x-source: https://developer.accor.com/api-portfolio/hotel-events/100
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at id
+  /catalog/v1/inventory/hotels:
+    get:
+      operationId: get_catalog_v1_inventory_hotels
+      tags:
+      - Catalog
+      summary: Get hotels inventory
+      x-source: https://developer.accor.com/api-portfolio/hotel-inventory/102
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogV1InventoryHotelsResponse'
+      x-evidence:
+        kind: documentation
+  /catalog/v2/_search/restaurants:
+    get:
+      operationId: get_catalog_v2_search_restaurants
+      tags:
+      - Catalog
+      summary: Geographical search of restaurants
+      x-source: https://developer.accor.com/api-portfolio/restaurants-v2/257
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v2/restaurants:
+    get:
+      operationId: get_catalog_v2_restaurants
+      tags:
+      - Catalog
+      summary: Get all restaurants (base information)
+      x-source: https://developer.accor.com/api-portfolio/restaurants-v2/257
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v2/restaurants/{id}:
+    get:
+      operationId: get_catalog_v2_restaurants_id
+      tags:
+      - Catalog
+      summary: Get restaurant using id
+      x-source: https://developer.accor.com/api-portfolio/restaurants-v2/257
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostCatalogV1HotelsHotelidPoliciesResponse:
+      type: object
+      properties:
+        Policies:
+          type: object
+        TranslatedLabel:
+          type: object
+        Period:
+          type: object
+        Error:
+          type: object
+    PostCatalogV1HotelsIdRatesResponse:
+      type: object
+      properties:
+        Rates:
+          type: object
+          description: Successful response containing rates
+        Error:
+          type: object
+          description: Error response
+    PostCatalogV1HotelsIdRatesRequest:
+      type: object
+      properties:
+        RatesIn:
+          type: object
+          description: Input payload for rates
+      required:
+      - RatesIn
+    GetCatalogV1InventoryHotelsResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Successful response with hotel inventory list
+        default:
+          type: string
+          description: Error response
+    PostCatalogV1HotelsHotelidPoliciesRequest:
+      type: object
+      properties:
+        PoliciesIn:
+          type: object
+    GetCatalogV1HotelsIdProductsAccommodationsResponse:
+      type: object
+      properties:
+        ProductsAccommodationsDto:
+          type: object
+    GetCatalogV1HotelsHotelidTaxesResponse:
+      type: object
+      properties:
+        Taxes:
+          type: object
+          description: Taxes information.
+        Code:
+          type: object
+          description: Tax code.
+        TranslatedLabel:
+          type: object
+          description: Label translated in different languages.
+        CodeWithTranslatedLabels:
+          type: object
+          description: Tax code with translated labels.
+        Error:
+          type: object
+          description: Error object.

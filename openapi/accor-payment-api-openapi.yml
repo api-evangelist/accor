@@ -1,0 +1,449 @@
+openapi: 3.2.0
+info:
+  title: Accor Payment API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 79 operation(s) read from 28 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Accor has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 79
+    pages-with-code: 0
+    pages-read: 28
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.accor.com/api-portfolio/accommodations/108
+  - https://developer.accor.com/api-portfolio/asset-contracts/100
+  - https://developer.accor.com/api-portfolio/business-offers/134
+  - https://developer.accor.com/api-portfolio/customer-information/400
+  - https://developer.accor.com/api-portfolio/customer-marketing-subscriptions/14
+  - https://developer.accor.com/api-portfolio/facilities/105
+  - https://developer.accor.com/api-portfolio/hotel-events/100
+  - https://developer.accor.com/api-portfolio/hotel-interface/101
+  - https://developer.accor.com/api-portfolio/hotel-options/102
+  - https://developer.accor.com/api-portfolio/hotel-policies/101
+  - https://developer.accor.com/api-portfolio/hotel-rates/102
+  - https://developer.accor.com/api-portfolio/hotel-surroundings/100
+  - https://developer.accor.com/api-portfolio/hotel-taxes/101
+  - https://developer.accor.com/api-portfolio/link-loyalty-cross-rewards-program/104
+  - https://developer.accor.com/api-portfolio/loyalty-burn/133
+  - https://developer.accor.com/api-portfolio/loyalty-fnb-earn/100
+  - https://developer.accor.com/api-portfolio/loyalty-generic-partner-earn-points/116
+  - https://developer.accor.com/api-portfolio/loyalty-partner-enroll/200
+  - https://developer.accor.com/api-portfolio/medias/101
+  - https://developer.accor.com/api-portfolio/payment/222
+  - https://developer.accor.com/api-portfolio/payment-interface-payment-provider/105
+  - https://developer.accor.com/api-portfolio/privatepublicationcheck/200
+  - https://developer.accor.com/api-portfolio/properties/1016
+  - https://developer.accor.com/api-portfolio/referential-loyalty-cards-threshold/100
+  - https://developer.accor.com/api-portfolio/referential-v2/203
+  - https://developer.accor.com/api-portfolio/restaurants-v2/257
+  - https://developer.accor.com/api-portfolio/travelconciergetestnew/200
+  - https://developer.accor.com/api-portfolio/hotel-inventory/102
+servers:
+- url: https://api.accor.com
+tags:
+- name: Payment
+paths:
+  /payment/v1/interface/terminalprovider/{terminalproviderid}:
+    post:
+      operationId: post_payment_v1_interface_terminalprovider_terminalproviderid
+      tags:
+      - Payment
+      summary: Cancel a Preauthorization
+      x-source: https://developer.accor.com/api-portfolio/payment-interface-payment-provider/105
+      parameters:
+      - name: terminalproviderid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 7 example path(s) differing only at terminalproviderId
+  /payment/v2/cards/{paymenttransactionid}:
+    get:
+      operationId: get_payment_v2_cards_paymenttransactionid
+      tags:
+      - Payment
+      summary: Retrieve the credit card data from ACCOR Vault
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2CardsPaymenttransactionidResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/cards/{paymenttransactionid}/purge:
+    put:
+      operationId: put_payment_v2_cards_paymenttransactionid_purge
+      tags:
+      - Payment
+      summary: Delete a credit card from ACCOR Vault
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutPaymentV2CardsPaymenttransactionidPurgeResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/merchants/paymentMeans:
+    get:
+      operationId: get_payment_v2_merchants_paymentMeans
+      tags:
+      - Payment
+      summary: Retrieve the list of available payment methods for a merchant
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2MerchantsPaymentmeansResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/referential/cards:
+    get:
+      operationId: get_payment_v2_referential_cards
+      tags:
+      - Payment
+      summary: Retrieve all credit card patterns for surface controls
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2ReferentialCardsResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/sessions/{paymentsessionid}/transactions:
+    post:
+      operationId: post_payment_v2_sessions_paymentsessionid_transactions
+      tags:
+      - Payment
+      summary: Retrieve all the elements necessary to the checkout page to initialize a…
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymentsessionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2SessionsPaymentsessionidTransactionsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2SessionsPaymentsessionidTransactionsResponse'
+      x-evidence:
+        kind: documentation
+  /payment/v2/sessions/{paymentsessionid}/transactions/{paymenttransactionid}:
+    delete:
+      operationId: delete_payment_v2_sessions_paymentsessionid_transactions_paymenttransactionid
+      tags:
+      - Payment
+      summary: Cancel a transaction
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymentsessionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr'
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_payment_v2_sessions_paymentsessionid_transactions_paymenttransactionid
+      tags:
+      - Payment
+      summary: Retrieve all the elements necessary to the checkout page to initialize a…
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymentsessionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans'
+      x-evidence:
+        kind: documentation
+  /payment/v2/transactions/{paymenttransactionid}/wallet/tokenization:
+    post:
+      operationId: post_payment_v2_transactions_paymenttransactionid_wallet_tokenization
+      tags:
+      - Payment
+      summary: Tokenize a WALLET credit card
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat2'
+      x-evidence:
+        kind: documentation
+  /payment/v2/transactions/{paymenttransactionid}/{id}:
+    get:
+      operationId: get_payment_v2_transactions_paymenttransactionid_id
+      tags:
+      - Payment
+      summary: Returns the list of operations associated with a transaction
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentV2TransactionsPaymenttransactionidIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+    post:
+      operationId: post_payment_v2_transactions_paymenttransactionid_id
+      tags:
+      - Payment
+      summary: Try a payment intent with or without payment facilities
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: paymenttransactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidIdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2TransactionsPaymenttransactionidIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at id
+  /payment/v2/{v2id}:
+    post:
+      operationId: post_payment_v2_v2id
+      tags:
+      - Payment
+      summary: Tokenize a credit card into ACCOR Vault
+      x-source: https://developer.accor.com/api-portfolio/payment/222
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentV2V2IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentV2V2IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v2Id
+components:
+  schemas:
+    GetPaymentV2CardsPaymenttransactionidResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV2TransactionsPaymenttransactionidIdResponse:
+      type: object
+      properties:
+        body:
+          type: object
+    GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans:
+      type: object
+      properties:
+        body:
+          type: object
+    DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr:
+      type: object
+      properties:
+        body:
+          type: object
+    PostPaymentV2SessionsPaymentsessionidTransactionsRequest:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    PostPaymentV2V2IdResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV2V2IdRequest:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ:
+      type: object
+      properties:
+        CancelRequest:
+          type: object
+      required:
+      - CancelRequest
+    PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp:
+      type: object
+      properties:
+        CheckResponse:
+          type: object
+    PostPaymentV2TransactionsPaymenttransactionidIdRequest:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat2:
+      type: object
+      properties:
+        body:
+          type: object
+    PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    GetPaymentV2ReferentialCardsResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV2SessionsPaymentsessionidTransactionsResponse:
+      type: object
+      properties:
+        body:
+          type: object
+    GetPaymentV2TransactionsPaymenttransactionidIdResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PutPaymentV2CardsPaymenttransactionidPurgeResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    GetPaymentV2MerchantsPaymentmeansResponse:
+      type: object
+      properties:
+        body:
+          type: object

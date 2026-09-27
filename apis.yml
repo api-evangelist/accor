@@ -80,16 +80,16 @@ common:
   url: https://developer.accor.com/legal_notice
 
 apis:
-- aid: accor:accor-api
-  name: Accor API
-  description: 'Accor API as documented publicly: 79 operations. Contract generated from the documentation by API Evangelist (2026-09-22); not
-    the provider''s own document.'
+- aid: accor:accor-businessoffers-api
+  name: Accor Businessoffers API
+  description: The Businessoffers API from Accor — 5 operation(s) for businessoffers.
   humanURL: https://developer.accor.com/api-portfolio/accommodations/108
   baseURL: https://api.accor.com
+  tags:
+  - Businessoffers
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/accor-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/accor-businessoffers-api-openapi.yml
   - type: JSONSchema
     url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
   - type: JSONSchema
@@ -99,10 +99,301 @@ apis:
   - type: JSONSchema
     url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
   - type: JSONSchema
-    url: json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
   - type: JSONSchema
-    url: json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
-
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-catalog-api
+  name: Accor Catalog API
+  description: The Catalog API from Accor — 13 operation(s) for catalog.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-catalog-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-contracts-api
+  name: Accor Contracts API
+  description: The Contracts API from Accor — 2 operation(s) for contracts.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Contracts
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-contracts-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-customer-api
+  name: Accor Customer API
+  description: The Customer API from Accor — 2 operation(s) for customer.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Customer
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-customer-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-hotel-interface-api
+  name: Accor Hotel Interface API
+  description: The Hotel Interface API from Accor — 5 operation(s) for hotel interface.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Hotel Interface
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-hotel-interface-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-loyalty-api
+  name: Accor Loyalty API
+  description: The Loyalty API from Accor — 22 operation(s) for loyalty.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Loyalty
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-loyalty-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-payment-api
+  name: Accor Payment API
+  description: The Payment API from Accor — 10 operation(s) for payment.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Payment
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-payment-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-private-publication-check-api
+  name: Accor Private Publication Check API
+  description: >-
+    The Private Publication Check API from Accor — 2 operation(s) for private publication check.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Private Publication Check
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-private-publication-check-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-referentials-api
+  name: Accor Referentials API
+  description: The Referentials API from Accor — 1 operation(s) for referentials.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Referentials
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-referentials-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-secure-api
+  name: Accor Secure API
+  description: The Secure API from Accor — 1 operation(s) for secure.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Secure
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-secure-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-test-travel-concierge-new-api
+  name: Accor Test Travel Concierge New API
+  description: >-
+    The Test Travel Concierge New API from Accor — 2 operation(s) for test travel concierge new.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Test Travel Concierge New
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-test-travel-concierge-new-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-wallet-api
+  name: Accor Wallet API
+  description: The Wallet API from Accor — 2 operation(s) for wallet.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Wallet
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-wallet-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
+- aid: accor:accor-health-check-api
+  name: Accor Health Check API
+  description: The Health Check API from Accor — 1 operation(s) for health check.
+  humanURL: https://developer.accor.com/api-portfolio/accommodations/108
+  baseURL: https://api.accor.com
+  tags:
+  - Health Check
+  properties:
+  - type: OpenAPI
+    url: openapi/accor-health-check-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-hotels-hotelid-taxes-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-get-catalog-v1-inventory-hotels-response-schema.json
+  - type: JSONSchema
+    url: json-schema/accor-post-catalog-v1-hotels-id-rates-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
