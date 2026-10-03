@@ -354,22 +354,38 @@ paths:
         collapsed_from: 2 example path(s) differing only at v2Id
 components:
   schemas:
-    GetPaymentV2CardsPaymenttransactionidResponse:
+    PostPaymentV2TransactionsPaymenttransactionidIdRequest:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat:
+      type: object
+      properties:
+        body:
+          type: object
+      required:
+      - body
+    PostPaymentV2V2IdRequest:
       type: object
       properties:
         object:
           type: object
+    PostPaymentV2SessionsPaymentsessionidTransactionsResponse:
+      type: object
+      properties:
+        body:
+          type: object
+    PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ:
+      type: object
+      properties:
+        CancelRequest:
+          type: object
+      required:
+      - CancelRequest
     PostPaymentV2TransactionsPaymenttransactionidIdResponse:
-      type: object
-      properties:
-        body:
-          type: object
-    GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans:
-      type: object
-      properties:
-        body:
-          type: object
-    DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr:
       type: object
       properties:
         body:
@@ -381,53 +397,42 @@ components:
           type: object
       required:
       - body
-    PostPaymentV2V2IdResponse:
-      type: object
-      properties:
-        object:
-          type: object
-    PostPaymentV2V2IdRequest:
-      type: object
-      properties:
-        object:
-          type: object
-    PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ:
-      type: object
-      properties:
-        CancelRequest:
-          type: object
-      required:
-      - CancelRequest
-    PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp:
-      type: object
-      properties:
-        CheckResponse:
-          type: object
-    PostPaymentV2TransactionsPaymenttransactionidIdRequest:
-      type: object
-      properties:
-        body:
-          type: object
-      required:
-      - body
     PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat2:
       type: object
       properties:
         body:
           type: object
-    PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat:
+    GetPaymentV2MerchantsPaymentmeansResponse:
       type: object
       properties:
         body:
           type: object
-      required:
-      - body
+    GetPaymentV2CardsPaymenttransactionidResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostPaymentV2V2IdResponse:
+      type: object
+      properties:
+        object:
+          type: object
     GetPaymentV2ReferentialCardsResponse:
       type: object
       properties:
         object:
           type: object
-    PostPaymentV2SessionsPaymentsessionidTransactionsResponse:
+    GetPaymentV2SessionsPaymentsessionidTransactionsPaymenttrans:
+      type: object
+      properties:
+        body:
+          type: object
+    PutPaymentV2CardsPaymenttransactionidPurgeResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    DeletePaymentV2SessionsPaymentsessionidTransactionsPaymenttr:
       type: object
       properties:
         body:
@@ -437,13 +442,8 @@ components:
       properties:
         object:
           type: object
-    PutPaymentV2CardsPaymenttransactionidPurgeResponse:
+    PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp:
       type: object
       properties:
-        object:
-          type: object
-    GetPaymentV2MerchantsPaymentmeansResponse:
-      type: object
-      properties:
-        body:
+        CheckResponse:
           type: object

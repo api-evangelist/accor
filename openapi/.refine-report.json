@@ -18,13 +18,30 @@
     "accor-test-travel-concierge-new-api-openapi.yml",
     "accor-wallet-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "accor-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+13 apis, 13 total)"
+    "superseded outputs removed: accor-health-check-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 13 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "accor-businessoffers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-catalog-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-contracts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-customer-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-health-check-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-hotel-interface-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-loyalty-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-payment-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-private-publication-check-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-referentials-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-secure-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-test-travel-concierge-new-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "accor-wallet-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

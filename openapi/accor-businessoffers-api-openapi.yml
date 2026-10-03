@@ -182,43 +182,43 @@ paths:
         kind: documentation
 components:
   schemas:
-    GetBusinessoffersV1OffersOfferidPricingConditionsResponse:
+    GetBusinessoffersV1OffersOfferidResponse:
       type: object
       properties:
-        PricingConditionsResponse:
-          type: object
-    PostBusinessoffersV1HotelsHotelidProductsOffersResponse:
-      type: object
-      properties:
-        OffersResponse:
-          type: object
-    PostBusinessoffersV1BestOffersResponse:
-      type: object
-      properties:
-        BestOfferResponse:
-          type: object
-    PostBusinessoffersV1HotelsHotelidProductsOffersRequest:
-      type: object
-      properties:
-        OfferRequest:
-          type: object
-    GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse:
-      type: object
-      properties:
-        CalendarBestOffersResponse:
+        OptionResponse:
           type: object
     GetBusinessoffersV1BestOffersResponse:
       type: object
       properties:
         BestOfferResponse:
           type: object
-    GetBusinessoffersV1OffersOfferidResponse:
+    PostBusinessoffersV1BestOffersResponse:
       type: object
       properties:
-        OptionResponse:
+        BestOfferResponse:
+          type: object
+    GetBusinessoffersV1OffersOfferidPricingConditionsResponse:
+      type: object
+      properties:
+        PricingConditionsResponse:
           type: object
     PostBusinessoffersV1BestOffersRequest:
       type: object
       properties:
         BestOfferRequest:
+          type: object
+    PostBusinessoffersV1HotelsHotelidProductsOffersRequest:
+      type: object
+      properties:
+        OfferRequest:
+          type: object
+    PostBusinessoffersV1HotelsHotelidProductsOffersResponse:
+      type: object
+      properties:
+        OffersResponse:
+          type: object
+    GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse:
+      type: object
+      properties:
+        CalendarBestOffersResponse:
           type: object

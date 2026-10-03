@@ -312,53 +312,6 @@ paths:
         kind: documentation
 components:
   schemas:
-    PostCatalogV1HotelsHotelidPoliciesResponse:
-      type: object
-      properties:
-        Policies:
-          type: object
-        TranslatedLabel:
-          type: object
-        Period:
-          type: object
-        Error:
-          type: object
-    PostCatalogV1HotelsIdRatesResponse:
-      type: object
-      properties:
-        Rates:
-          type: object
-          description: Successful response containing rates
-        Error:
-          type: object
-          description: Error response
-    PostCatalogV1HotelsIdRatesRequest:
-      type: object
-      properties:
-        RatesIn:
-          type: object
-          description: Input payload for rates
-      required:
-      - RatesIn
-    GetCatalogV1InventoryHotelsResponse:
-      type: object
-      properties:
-        '200':
-          type: string
-          description: Successful response with hotel inventory list
-        default:
-          type: string
-          description: Error response
-    PostCatalogV1HotelsHotelidPoliciesRequest:
-      type: object
-      properties:
-        PoliciesIn:
-          type: object
-    GetCatalogV1HotelsIdProductsAccommodationsResponse:
-      type: object
-      properties:
-        ProductsAccommodationsDto:
-          type: object
     GetCatalogV1HotelsHotelidTaxesResponse:
       type: object
       properties:
@@ -377,3 +330,50 @@ components:
         Error:
           type: object
           description: Error object.
+    GetCatalogV1InventoryHotelsResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Successful response with hotel inventory list
+        default:
+          type: string
+          description: Error response
+    GetCatalogV1HotelsIdProductsAccommodationsResponse:
+      type: object
+      properties:
+        ProductsAccommodationsDto:
+          type: object
+    PostCatalogV1HotelsIdRatesRequest:
+      type: object
+      properties:
+        RatesIn:
+          type: object
+          description: Input payload for rates
+      required:
+      - RatesIn
+    PostCatalogV1HotelsHotelidPoliciesRequest:
+      type: object
+      properties:
+        PoliciesIn:
+          type: object
+    PostCatalogV1HotelsIdRatesResponse:
+      type: object
+      properties:
+        Rates:
+          type: object
+          description: Successful response containing rates
+        Error:
+          type: object
+          description: Error response
+    PostCatalogV1HotelsHotelidPoliciesResponse:
+      type: object
+      properties:
+        Policies:
+          type: object
+        TranslatedLabel:
+          type: object
+        Period:
+          type: object
+        Error:
+          type: object
