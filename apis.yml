@@ -158,6 +158,8 @@ apis:
   humanURL: https://developer.accor.com/api-portfolio/accommodations/108
   baseURL: https://api.accor.com
   tags:
+  - Customers
+  tags_raw:
   - Customer
   properties:
   - type: OpenAPI
@@ -230,6 +232,8 @@ apis:
   humanURL: https://developer.accor.com/api-portfolio/accommodations/108
   baseURL: https://api.accor.com
   tags:
+  - Payments
+  tags_raw:
   - Payment
   properties:
   - type: OpenAPI
@@ -352,6 +356,8 @@ apis:
   humanURL: https://developer.accor.com/api-portfolio/accommodations/108
   baseURL: https://api.accor.com
   tags:
+  - Wallets
+  tags_raw:
   - Wallet
   properties:
   - type: OpenAPI
