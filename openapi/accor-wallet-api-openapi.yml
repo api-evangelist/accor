@@ -148,17 +148,7 @@ paths:
         kind: documentation
 components:
   schemas:
-    DeleteWalletV2CardsCustomeridResponse:
-      type: object
-      properties:
-        object:
-          type: object
-    PatchWalletV2CardsCustomeridRequest:
-      type: object
-      properties:
-        object:
-          type: object
-    PostWalletV2CardsCustomeridResponse:
+    PatchWalletV2CardsCustomeridResponse:
       type: object
       properties:
         object:
@@ -168,12 +158,22 @@ components:
       properties:
         object:
           type: object
-    PatchWalletV2CardsCustomeridResponse:
+    PatchWalletV2CardsCustomeridRequest:
       type: object
       properties:
         object:
           type: object
     PostWalletV2CardsCustomeridRequest:
+      type: object
+      properties:
+        object:
+          type: object
+    DeleteWalletV2CardsCustomeridResponse:
+      type: object
+      properties:
+        object:
+          type: object
+    PostWalletV2CardsCustomeridResponse:
       type: object
       properties:
         object:

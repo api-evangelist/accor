@@ -192,16 +192,6 @@ components:
       properties:
         BestOfferResponse:
           type: object
-    PostBusinessoffersV1BestOffersResponse:
-      type: object
-      properties:
-        BestOfferResponse:
-          type: object
-    GetBusinessoffersV1OffersOfferidPricingConditionsResponse:
-      type: object
-      properties:
-        PricingConditionsResponse:
-          type: object
     PostBusinessoffersV1BestOffersRequest:
       type: object
       properties:
@@ -212,13 +202,23 @@ components:
       properties:
         OfferRequest:
           type: object
-    PostBusinessoffersV1HotelsHotelidProductsOffersResponse:
+    GetBusinessoffersV1OffersOfferidPricingConditionsResponse:
       type: object
       properties:
-        OffersResponse:
+        PricingConditionsResponse:
           type: object
     GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse:
       type: object
       properties:
         CalendarBestOffersResponse:
+          type: object
+    PostBusinessoffersV1HotelsHotelidProductsOffersResponse:
+      type: object
+      properties:
+        OffersResponse:
+          type: object
+    PostBusinessoffersV1BestOffersResponse:
+      type: object
+      properties:
+        BestOfferResponse:
           type: object
