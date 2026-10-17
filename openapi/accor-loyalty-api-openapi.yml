@@ -539,7 +539,56 @@ paths:
         kind: documentation
 components:
   schemas:
-    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff:
+    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse:
+      type: object
+      properties:
+        UpdateDebitDateResponse:
+          type: object
+    PostLoyaltyV1MembersPmidIdResponse:
+      type: object
+      properties:
+        LinkResponseEntity:
+          type: object
+    PostLoyaltyV1BurnHotelxpHotelxpidRequest:
+      type: object
+      properties:
+        ReleasePointRequest:
+          type: object
+      required:
+      - ReleasePointRequest
+    PostLoyaltyV1BurnBurnidBurnpointsRequest:
+      type: object
+      properties:
+        FnbBurnPointRequest:
+          type: object
+      required:
+      - FnbBurnPointRequest
+    PostLoyaltyV20PartnerEnrollResponse:
+      type: object
+      properties:
+        partnerEnrollResponse:
+          type: object
+        errorBackend:
+          type: object
+        errorApigee:
+          type: object
+    PostLoyaltyV1BurnHotelxpHotelxpidResponse:
+      type: object
+      properties:
+        ReleasePointResponse:
+          type: object
+    PostLoyaltyV1BurnPartnerxpPartnerxpidResponse:
+      type: object
+      properties:
+        ReleasePointResponse:
+          type: object
+          description: Response body after releasing points
+    GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse:
+      type: object
+      properties:
+        BurnPointsRatio:
+          type: object
+    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse:
       type: object
       properties:
         ReferentialsResponseEntity:
@@ -553,32 +602,17 @@ components:
       properties:
         BurnPointsRatio:
           type: object
-    PostLoyaltyV1BurnPartnerxpPartnerxpidRequest:
+    GetLoyaltyV1EarnFnbTransactionidStatusResponse:
       type: object
       properties:
-        PartnerReleasePointRequest:
+        FnbEarnStatusResponse:
           type: object
-          description: Request body for releasing partner experience points
-      required:
-      - PartnerReleasePointRequest
-    PostLoyaltyV1BurnHotelxpHotelxpidResponse:
+    PostLoyaltyV1EarnFnbEarnpointsResponse:
       type: object
       properties:
-        ReleasePointResponse:
+        FnbEarnPointResponse:
           type: object
-    PostLoyaltyV1BurnBurnidBurnpointsResponse:
-      type: object
-      properties:
-        FnbBurnPointResponse:
-          type: object
-    PostLoyaltyV1BurnBurnidBurnpointsRequest:
-      type: object
-      properties:
-        FnbBurnPointRequest:
-          type: object
-      required:
-      - FnbBurnPointRequest
-    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse:
+    GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff:
       type: object
       properties:
         ReferentialsResponseEntity:
@@ -587,34 +621,10 @@ components:
           type: object
         GenericError:
           type: object
-    PostLoyaltyV1BurnHotelxpHotelxpidRequest:
-      type: object
-      properties:
-        ReleasePointRequest:
-          type: object
-      required:
-      - ReleasePointRequest
-    PostLoyaltyV1MembersPmidIdRequest:
-      type: object
-      properties:
-        LinkRequest:
-          type: object
-    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest:
-      type: object
-      properties:
-        UpdateDebitDateRequest:
-          type: object
-      required:
-      - UpdateDebitDateRequest
     PostLoyaltyV1EarnFnbEarnpointsRequest:
       type: object
       properties:
         FnbEarnPointRequest:
-          type: object
-    GetLoyaltyV1EarnFnbTransactionidStatusResponse:
-      type: object
-      properties:
-        FnbEarnStatusResponse:
           type: object
     PostLoyaltyV20PartnerEnrollRequest:
       type: object
@@ -623,38 +633,28 @@ components:
           type: object
       required:
       - partnerEnrollRequestBody
-    PostLoyaltyV1MembersPmidIdResponse:
+    PostLoyaltyV1BurnBurnidBurnpointsResponse:
       type: object
       properties:
-        LinkResponseEntity:
+        FnbBurnPointResponse:
           type: object
-    PostLoyaltyV1BurnPartnerxpPartnerxpidResponse:
+    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidRequest:
       type: object
       properties:
-        ReleasePointResponse:
+        UpdateDebitDateRequest:
           type: object
-          description: Response body after releasing points
-    GetLoyaltyV1BurnHotelxpConversionrateHotelcodeResponse:
+      required:
+      - UpdateDebitDateRequest
+    PostLoyaltyV1BurnPartnerxpPartnerxpidRequest:
       type: object
       properties:
-        BurnPointsRatio:
+        PartnerReleasePointRequest:
           type: object
-    PostLoyaltyV1EarnFnbEarnpointsResponse:
+          description: Request body for releasing partner experience points
+      required:
+      - PartnerReleasePointRequest
+    PostLoyaltyV1MembersPmidIdRequest:
       type: object
       properties:
-        FnbEarnPointResponse:
-          type: object
-    PostLoyaltyV20PartnerEnrollResponse:
-      type: object
-      properties:
-        partnerEnrollResponse:
-          type: object
-        errorBackend:
-          type: object
-        errorApigee:
-          type: object
-    PatchLoyaltyV1BurnBurnidBurnpointsTransactionidResponse:
-      type: object
-      properties:
-        UpdateDebitDateResponse:
+        LinkRequest:
           type: object

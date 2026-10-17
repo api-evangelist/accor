@@ -182,15 +182,20 @@ paths:
         kind: documentation
 components:
   schemas:
+    PostBusinessoffersV1BestOffersResponse:
+      type: object
+      properties:
+        BestOfferResponse:
+          type: object
     GetBusinessoffersV1OffersOfferidResponse:
       type: object
       properties:
         OptionResponse:
           type: object
-    GetBusinessoffersV1BestOffersResponse:
+    GetBusinessoffersV1OffersOfferidPricingConditionsResponse:
       type: object
       properties:
-        BestOfferResponse:
+        PricingConditionsResponse:
           type: object
     PostBusinessoffersV1BestOffersRequest:
       type: object
@@ -202,11 +207,6 @@ components:
       properties:
         OfferRequest:
           type: object
-    GetBusinessoffersV1OffersOfferidPricingConditionsResponse:
-      type: object
-      properties:
-        PricingConditionsResponse:
-          type: object
     GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse:
       type: object
       properties:
@@ -217,7 +217,7 @@ components:
       properties:
         OffersResponse:
           type: object
-    PostBusinessoffersV1BestOffersResponse:
+    GetBusinessoffersV1BestOffersResponse:
       type: object
       properties:
         BestOfferResponse:
