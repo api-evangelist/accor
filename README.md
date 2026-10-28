@@ -64,5 +64,131 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Accor is a company surfaced via the API Evangelist harvest backlog (source: travel) and added to the network as a stub for full-pipeline profiling.
-- https://accor.com/
+Accor is a global hospitality group operating a portfolio of hotels, resorts, and residences across more than 110 countries. The company focuses on delivering innovative travel experiences, sustainability initiatives, and digital services for guests and partners. While its consumer-facing sites provide booking and loyalty programs, Accor also offers partner solutions and data services, reflecting its commitment to technology-driven hospitality.
+
+**Areas:** Company · Hospitality · Travel · Hotels · Technology
+
+## Accor on APIs.io
+
+Everything profiled for Accor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/accor/](https://apis.io/providers/accor/)** — or go straight to one of the APIs or properties below.
+
+### APIs (13)
+
+- [Accor Businessoffers API](https://apis.io/apis/accor/accor-businessoffers-api/) — The Businessoffers API from Accor — 5 operation(s) for businessoffers.
+- [Accor Catalog API](https://apis.io/apis/accor/accor-catalog-api/) — The Catalog API from Accor — 13 operation(s) for catalog.
+- [Accor Contracts API](https://apis.io/apis/accor/accor-contracts-api/) — The Contracts API from Accor — 2 operation(s) for contracts.
+- [Accor Customer API](https://apis.io/apis/accor/accor-customer-api/) — The Customer API from Accor — 2 operation(s) for customer.
+- [Accor Hotel Interface API](https://apis.io/apis/accor/accor-hotel-interface-api/) — The Hotel Interface API from Accor — 5 operation(s) for hotel interface.
+- [Accor Loyalty API](https://apis.io/apis/accor/accor-loyalty-api/) — The Loyalty API from Accor — 22 operation(s) for loyalty.
+- [Accor Payment API](https://apis.io/apis/accor/accor-payment-api/) — The Payment API from Accor — 10 operation(s) for payment.
+- [Accor Private Publication Check API](https://apis.io/apis/accor/accor-private-publication-check-api/) — The Private Publication Check API from Accor — 2 operation(s) for private publication check.
+- [Accor Referentials API](https://apis.io/apis/accor/accor-referentials-api/) — The Referentials API from Accor — 1 operation(s) for referentials.
+- [Accor Secure API](https://apis.io/apis/accor/accor-secure-api/) — The Secure API from Accor — 1 operation(s) for secure.
+- [Accor Test Travel Concierge New API](https://apis.io/apis/accor/accor-test-travel-concierge-new-api/) — The Test Travel Concierge New API from Accor — 2 operation(s) for test travel concierge new.
+- [Accor Wallet API](https://apis.io/apis/accor/accor-wallet-api/) — The Wallet API from Accor — 2 operation(s) for wallet.
+- [Accor Health Check API](https://apis.io/apis/accor/accor-health-check-api/) — The Health Check API from Accor — 1 operation(s) for health check.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [accor-mcp.yml](https://apis.io/servers/accor/accor-mcp-yml/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetCatalogV1HotelsHotelidTaxesResponse](https://apis.io/schemas/accor/accor-get-catalog-v1-hotels-hotelid-taxes-response/)
+- [GetCatalogV1InventoryHotelsResponse](https://apis.io/schemas/accor/accor-get-catalog-v1-inventory-hotels-response/)
+- [GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff](https://apis.io/schemas/accor/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off/)
+- [GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse](https://apis.io/schemas/accor/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response/)
+- [PostCatalogV1HotelsIdRatesResponse](https://apis.io/schemas/accor/accor-post-catalog-v1-hotels-id-rates-response/)
+- [PostLoyaltyV1BurnPartnerxpPartnerxpidRequest](https://apis.io/schemas/accor/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Accor Context](https://apis.io/jsonld/accor/accor-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Accor API Rules](https://apis.io/rules/accor/accor-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Accor Domain Security](https://apis.io/security/accor/accor-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://accor.com/)
+- [Documentation](https://developer.accor.com/api-portfolio)
+- [Getting started](https://developer.accor.com/user/register)
+- [API reference](https://developer.accor.com/api-portfolio)
+- [Support](https://developer.accor.com/contact)
+- [Blog](https://developer.accor.com/blog)
+- [Terms of service](https://developer.accor.com/terms_of_service)
+- [Privacy policy](https://developer.accor.com/legal_notice)
+
+## API Evangelist rating
+
+**Kin Score 31.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 24.6 |
+| Contract governance | 22.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 21.1 |
+
+**Agent readiness 14.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/accor/](https://apis.io/providers/accor/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Accor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/accor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
