@@ -98,22 +98,50 @@ Model Context Protocol servers that expose the API to agents.
 
 - [accor-mcp.yml](https://apis.io/servers/accor/accor-mcp-yml/)
 
-#### JSON Schema (6)
+#### JSON Schema (24)
 
 The data models the API reads and writes.
 
+- [DeleteWalletV2CardsCustomeridResponse](https://apis.io/schemas/accor/accor-delete-wallet-v2-cards-customerid-response/)
+- [GetBusinessoffersV1BestOffersResponse](https://apis.io/schemas/accor/accor-get-businessoffers-v1-best-offers-response/)
+- [GetBusinessoffersV1HotelsHotelidCalendarBestOffersResponse](https://apis.io/schemas/accor/accor-get-businessoffers-v1-hotels-hotelid-calendar-best-offers-response/)
+- [GetBusinessoffersV1OffersOfferidPricingConditionsResponse](https://apis.io/schemas/accor/accor-get-businessoffers-v1-offers-offerid-pricing-conditions-response/)
+- [GetBusinessoffersV1OffersOfferidResponse](https://apis.io/schemas/accor/accor-get-businessoffers-v1-offers-offerid-response/)
 - [GetCatalogV1HotelsHotelidTaxesResponse](https://apis.io/schemas/accor/accor-get-catalog-v1-hotels-hotelid-taxes-response/)
 - [GetCatalogV1InventoryHotelsResponse](https://apis.io/schemas/accor/accor-get-catalog-v1-inventory-hotels-response/)
 - [GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsPromotionalOff](https://apis.io/schemas/accor/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-promotional-off/)
 - [GetLoyaltyV1ReferentialsLoyaltyCardsThresholdsResponse](https://apis.io/schemas/accor/accor-get-loyalty-v1-referentials-loyalty-cards-thresholds-response/)
+- [GetPaymentV2CardsPaymenttransactionidResponse](https://apis.io/schemas/accor/accor-get-payment-v2-cards-paymenttransactionid-response/)
+- [GetWalletV2CardsCustomeridTokensResponse](https://apis.io/schemas/accor/accor-get-wallet-v2-cards-customerid-tokens-response/)
+- [PatchWalletV2CardsCustomeridRequest](https://apis.io/schemas/accor/accor-patch-wallet-v2-cards-customerid-request/)
+- [PatchWalletV2CardsCustomeridResponse](https://apis.io/schemas/accor/accor-patch-wallet-v2-cards-customerid-response/)
+- [PostBusinessoffersV1BestOffersRequest](https://apis.io/schemas/accor/accor-post-businessoffers-v1-best-offers-request/)
+- [PostBusinessoffersV1BestOffersResponse](https://apis.io/schemas/accor/accor-post-businessoffers-v1-best-offers-response/)
 - [PostCatalogV1HotelsIdRatesResponse](https://apis.io/schemas/accor/accor-post-catalog-v1-hotels-id-rates-response/)
 - [PostLoyaltyV1BurnPartnerxpPartnerxpidRequest](https://apis.io/schemas/accor/accor-post-loyalty-v1-burn-partnerxp-partnerxpid-request/)
+- [PostPaymentV1InterfaceTerminalproviderTerminalprovideridRequ](https://apis.io/schemas/accor/accor-post-payment-v1-interface-terminalprovider-terminalproviderid-requ/)
+- [PostPaymentV1InterfaceTerminalproviderTerminalprovideridResp](https://apis.io/schemas/accor/accor-post-payment-v1-interface-terminalprovider-terminalproviderid-resp/)
+- [PostPaymentV2SessionsPaymentsessionidTransactionsRequest](https://apis.io/schemas/accor/accor-post-payment-v2-sessions-paymentsessionid-transactions-request/)
+- [PostPaymentV2TransactionsPaymenttransactionidIdRequest](https://apis.io/schemas/accor/accor-post-payment-v2-transactions-paymenttransactionid-id-request/)
+- [PostPaymentV2TransactionsPaymenttransactionidWalletTokenizat](https://apis.io/schemas/accor/accor-post-payment-v2-transactions-paymenttransactionid-wallet-tokenizat/)
+- [PostWalletV2CardsCustomeridRequest](https://apis.io/schemas/accor/accor-post-wallet-v2-cards-customerid-request/)
+- [PostWalletV2CardsCustomeridResponse](https://apis.io/schemas/accor/accor-post-wallet-v2-cards-customerid-response/)
 
 #### JSON-LD (1)
 
 Linked-data contexts for the provider's vocabulary.
 
 - [Accor Context](https://apis.io/jsonld/accor/accor-context/)
+
+#### Overlays (5)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Accor Businessoffers Api Certification Overlay](https://apis.io/overlays/accor/accor-businessoffers-api-certification-overlay/)
+- [Accor Catalog Api Certification Overlay](https://apis.io/overlays/accor/accor-catalog-api-certification-overlay/)
+- [Accor Loyalty Api Certification Overlay](https://apis.io/overlays/accor/accor-loyalty-api-certification-overlay/)
+- [Accor Openapi Generated Certification Overlay](https://apis.io/overlays/accor/accor-openapi-generated-certification-overlay/)
+- [Accor Payment Api Certification Overlay](https://apis.io/overlays/accor/accor-payment-api-certification-overlay/)
 
 #### Governance rules (1)
 
@@ -142,18 +170,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 31.9** — thin · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 35.6** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
-| Discoverability | 78.6 |
+| Discoverability | 89.3 |
 | Contract quality | 24.6 |
 | Contract governance | 22.0 |
-| Operational transparency | 0.0 |
+| Operational transparency | 9.5 |
 | Developer ergonomics | 45.2 |
-| Access clarity | 21.1 |
+| Access clarity | 27.7 |
 
-**Agent readiness 14.7** — agent-aware
+**Agent readiness 14.1** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -176,6 +204,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
 **Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
 
